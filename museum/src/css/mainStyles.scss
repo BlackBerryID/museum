@@ -40,7 +40,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 83px 0 76px;
+    height: 150px;
   }
 }
 
@@ -54,9 +54,10 @@ body {
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
-  padding-left: 70px;
+  padding-left: 74px;
+  padding-top: 2px;
   background-image: url(../assets/svg/logo.svg);
-  background-size: 49px 33px;
+  background-size: 50px 36px;
   background-repeat: no-repeat;
   transition: all 0.2s;
 
@@ -68,8 +69,9 @@ body {
 }
 
 .navigation {
-  max-width: 720px;
+  max-width: 775px;
   width: 100%;
+  padding-top: 1px;
 
   ul {
     display: flex;
@@ -91,6 +93,10 @@ body {
       }
     }
 
+    li:nth-child(4n) .nav-link {
+      margin-right: 5px;
+    }
+
     li:last-child .nav-link {
       padding-right: 0;
     }
@@ -106,31 +112,39 @@ body {
 }
 
 .welcom {
-  background: url(../assets/img/welcom-bg.jpg) no-repeat;
-  background-position: calc(50% + 352px) calc(100%);
   background-color: $dark;
   color: #fff;
 
   &-content {
-    padding-top: 125px;
-    padding-bottom: 246px;
+    position: absolute;
+    display: inline-flex;
+    flex-direction: column;
+    padding-top: 150px;
+    z-index: 2;
+  }
+
+  &-container {
+    height: 810px;
   }
 
   p {
+    display: inline-block;
     font-size: 28px;
     letter-spacing: 2px;
     padding: 26px 0 76px;
   }
 
   .btn {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     height: 75px;
     width: 360px;
     font-size: 22px;
-    font-weight: 100;
+    font-weight: 300;
+    padding-bottom: 4px;
     letter-spacing: 2px;
+    line-height: 25px;
     color: #fff;
     background-color: $red;
     border-radius: 10px;
@@ -148,6 +162,7 @@ body {
   font-weight: 400;
   letter-spacing: 5px;
   text-transform: uppercase;
+  line-height: 90px;
 
   &-gold {
     color: $gold;
