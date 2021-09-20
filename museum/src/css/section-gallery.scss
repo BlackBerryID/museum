@@ -25,14 +25,9 @@
   flex-wrap: wrap;
   row-gap: 24px;
   column-gap: 36px;
-  height: 3000px;
+  height: 2850px;
 
-  .picture-item {
+  img {
     width: 456px;
-
-    img {
-      width: 100%;
-      height: auto;
-    }
   }
 }
