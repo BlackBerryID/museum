@@ -328,12 +328,16 @@ body {
 }
 
 .video {
-  &-container {
-    padding-top: 12px;
-  }
+  padding-bottom: 72px;
 
   &-player {
     position: relative;
+    height: 650px;
+
+    img {
+      height: 100%;
+      width: 100%;
+    }
 
     .btn {
       height: 220px;
@@ -353,11 +357,11 @@ body {
 
   .control-panel {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     height: 85px;
     width: 100%;
-    margin-top: -5px;
+    margin-top: -1px;
     padding-top: 2px;
     background-color: #000;
 
@@ -372,33 +376,24 @@ body {
           brightness(89%) contrast(92%);
       }
 
-      &-back {
-        width: 27px;
-        height: 30px;
-        background-image: url(../assets/svg/btn-back.svg);
-      }
-
       &-play {
         width: 23px;
         height: 30px;
+        margin-left: 5px;
         background-image: url(../assets/svg/btn-play.svg);
-      }
-
-      &-forward {
-        width: 27px;
-        height: 30px;
-        background-image: url(../assets/svg/btn-forward.svg);
       }
 
       &-volume {
         width: 38px;
         height: 30px;
+        margin-left: 2px;
         background-image: url(../assets/svg/btn-volume.svg);
       }
 
       &-fullScreen {
         width: 36px;
         height: 36px;
+        margin-right: 5px;
         background-image: url(../assets/svg/btn-fullScreen.svg);
       }
     }
@@ -406,14 +401,12 @@ body {
     .input {
       background: linear-gradient(
         to right,
-        #24809e 0%,
-        #24809e 47%,
-        #c4c4c4 47%,
+        $red 0%,
+        $red 43%,
+        #c4c4c4 43%,
         #c4c4c4 100%
       );
       height: 8px;
-      // outline: none;
-      // transition: background 450ms ease-in;
       -webkit-appearance: none;
 
       &::-webkit-slider-thumb {
@@ -426,7 +419,14 @@ body {
       }
 
       &-progress {
-        width: 820px;
+        width: 929px;
+        background: linear-gradient(
+          to right,
+          $red 0%,
+          $red 54%,
+          #c4c4c4 54%,
+          #c4c4c4 100%
+        );
       }
 
       &-volume {
@@ -437,7 +437,8 @@ body {
     .volume {
       display: flex;
       align-items: center;
-      width: 15.28%;
+      justify-content: space-between;
+      width: 243px;
 
       .btn-volume {
         margin-right: 20px;
@@ -447,7 +448,7 @@ body {
 
   .info {
     display: flex;
-    margin-top: 40px;
+    margin-bottom: 75px;
 
     h2 {
       width: 50%;

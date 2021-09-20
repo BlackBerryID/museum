@@ -6,7 +6,7 @@ import "swiper/scss/navigation";
 
 Swiper.use([Pagination, Navigation]);
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper(".welcom-swiper", {
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
