@@ -168,9 +168,9 @@ body {
     color: $gold;
   }
 
-  // &-white {
-  //   color: #fff;
-  // }
+  &-white {
+    color: #fff;
+  }
 
   &-underline {
     position: relative;
@@ -328,7 +328,7 @@ body {
 }
 
 .video {
-  padding-bottom: 72px;
+  padding-bottom: 71px;
 
   &-player {
     position: relative;
@@ -466,7 +466,7 @@ body {
 }
 
 .tickets {
-  background-color: $dark;
+  background-color: lightgrey;
   color: #fff;
   padding-top: 77px;
   padding-bottom: 72px;

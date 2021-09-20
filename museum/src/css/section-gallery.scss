@@ -1,0 +1,38 @@
+.gallery {
+  background-color: $dark;
+  padding-bottom: 0;
+
+  &-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+    width: 1440px;
+    height: 360px;
+  }
+}
+
+.picture-container {
+  position: relative;
+  height: 2125px;
+  overflow: hidden;
+}
+
+.picture-inner-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 36px;
+  height: 3000px;
+
+  .picture-item {
+    width: 456px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
