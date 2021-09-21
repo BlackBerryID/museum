@@ -3,6 +3,7 @@ $roboto: "Roboto", sans-serif;
 $dark: #030303;
 $red: #710707;
 $gold: #9d8665;
+$black: #000000;
 
 * {
   box-sizing: border-box;
@@ -466,20 +467,33 @@ body {
 }
 
 .tickets {
-  background-color: lightgrey;
-  color: #fff;
-  padding-top: 77px;
+  background-color: #fff;
+  color: $black;
+  padding-top: 72px;
   padding-bottom: 72px;
+
+  .title-underline {
+    top: 4px;
+
+    &::after {
+      bottom: -28px;
+    }
+  }
 
   .content {
     display: flex;
     margin-top: 105px;
   }
 
+  .picture {
+    margin-top: 2px;
+  }
+
   &-order {
     display: flex;
     justify-content: space-between;
     width: 50%;
+    padding-top: 2px;
 
     h4 {
       font-size: 28px;
@@ -490,10 +504,14 @@ body {
       flex-direction: column;
       margin-left: 60px;
 
+      & label:first-of-type {
+        margin-top: 49px;
+      }
+
       label {
         position: relative;
         font-size: 22px;
-        margin-top: 49px;
+        margin-top: 25px;
         margin-left: 40px;
         cursor: pointer;
         user-select: none;
@@ -510,12 +528,12 @@ body {
 
         .checkmark {
           position: absolute;
-          top: 4px;
+          top: 5px;
           left: -40px;
           height: 17px;
           width: 17px;
           background-color: inherit;
-          border: 2px solid #fff;
+          border: 2px solid $dark;
           border-radius: 50%;
 
           &::after {
@@ -527,7 +545,7 @@ body {
             display: none;
             height: 8px;
             width: 8px;
-            background-color: #fff;
+            background-color: $dark;
             border-radius: 50%;
           }
         }
@@ -541,7 +559,7 @@ body {
 
       .tickets-amount {
         padding: 3px 0;
-        border: 3px solid #fff;
+        border: 3px solid $dark;
       }
 
       p {
@@ -551,11 +569,11 @@ body {
         margin-left: 25px;
 
         &:first-of-type {
-          margin-top: 10px;
+          margin-top: 25px;
         }
 
         &:last-of-type {
-          margin-top: 35px;
+          margin-top: 12px;
         }
       }
 
@@ -565,7 +583,7 @@ body {
         font-size: 22px;
         text-align: center;
         background-color: inherit;
-        color: #fff;
+        color: $dark;
         border: none;
       }
 
@@ -573,7 +591,7 @@ body {
         vertical-align: middle;
         font-weight: 400;
         font-size: 32px;
-        color: #fff;
+        color: $dark;
         cursor: pointer;
 
         &:first-of-type {
@@ -591,7 +609,7 @@ body {
         font-weight: 700;
         font-size: 28px;
         letter-spacing: 1.65px;
-        margin: 50px 0 52px 0;
+        margin: 50px 0 60px 0;
       }
 
       .buyBtn {
@@ -600,9 +618,10 @@ body {
         height: 50px;
         font-size: 22px;
         letter-spacing: 2px;
-        background-color: #fff;
-        color: #000;
+        background-color: $dark;
+        color: #fff;
         transition: all 0.2s;
+        font-weight: 300;
 
         &:hover {
           background-color: $gold;
