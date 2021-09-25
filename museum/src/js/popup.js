@@ -16,9 +16,3 @@ popupCloseItems.forEach((item) =>
     if (e.target === item) closePopup();
   })
 );
-
-// prevent the page (background) scrolling to the tickets section
-const popupBtns = document.querySelectorAll(".popup-btn");
-popupBtns.forEach((item) =>
-  item.addEventListener("click", (e) => e.preventDefault())
-);

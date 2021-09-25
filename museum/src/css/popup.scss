@@ -692,6 +692,12 @@
     font-size: 22px;
     line-height: 26px;
     color: #fff;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: $gold;
+    }
   }
 
   .close-popup-form {

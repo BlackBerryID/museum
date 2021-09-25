@@ -8,7 +8,6 @@
   }
 
   &-slide {
-    
     &-1 {
       background: linear-gradient(
           90deg,
@@ -117,6 +116,12 @@
     &-prev::after {
       background: url(../assets/img/welcome-slider/btnPrev.svg) no-repeat;
     }
+
+    &-next:hover,
+    &-prev:hover {
+      filter: invert(53%) sepia(12%) saturate(897%) hue-rotate(356deg)
+        brightness(99%) contrast(90%);
+    }
   }
 
   &-pagination {
@@ -133,6 +138,10 @@
       margin: 0 12.5px !important;
 
       &-active {
+        background-color: #d2b183 !important;
+      }
+
+      &:hover {
         background-color: $gold !important;
       }
     }

@@ -18,9 +18,9 @@ $black: #000000;
   }
 }
 
-html {
-  scroll-behavior: smooth;
-}
+// html {
+//   scroll-behavior: smooth;
+// }
 
 body {
   font-family: $roboto;
@@ -92,6 +92,10 @@ body {
       &:hover {
         color: $gold;
       }
+
+      &:active {
+        color: #7e6c51;
+      }
     }
 
     li:nth-child(4n) .nav-link {
@@ -143,7 +147,7 @@ body {
     width: 360px;
     font-size: 22px;
     font-weight: 300;
-    padding-bottom: 4px;
+    padding-bottom: 3px;
     letter-spacing: 2px;
     line-height: 25px;
     color: #fff;
@@ -195,7 +199,7 @@ body {
 .cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 77px 60px;
+  gap: 76px 60px;
   margin-top: 105px;
 
   .cards-item {
@@ -232,7 +236,7 @@ body {
     p:first-of-type {
       font-weight: 100;
       font-size: 22px;
-      margin: 21px 0 10px;
+      margin: 22px 0 9px;
     }
 
     p {
@@ -449,7 +453,7 @@ body {
 
   .info {
     display: flex;
-    margin-bottom: 75px;
+    margin-bottom: 76px;
 
     h2 {
       width: 50%;
@@ -631,8 +635,16 @@ body {
   }
 }
 
+.parallax {
+  background: url(../assets/img/parallax.jpg);
+  width: 100%;
+  height: 400px;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 .contacts {
-  padding-bottom: 72px;
+  padding-bottom: 70px;
 
   h2 {
     margin-top: -2px;
@@ -641,7 +653,7 @@ body {
   .content {
     display: flex;
     width: 100%;
-    margin-top: 114px;
+    margin-top: 104px;
 
     .info {
       flex: 1 0 33.33%;
@@ -650,36 +662,35 @@ body {
     h4 {
       font-weight: 500;
       font-size: 28px;
-      margin-bottom: 37px;
+      margin-bottom: 50px;
     }
 
     p {
       font-size: 22px;
-      margin-bottom: 19px;
+      margin-bottom: 25px;
     }
 
     .map {
       flex: 2 0 66.66%;
-      margin-top: -10px;
+      margin-top: 1px;
     }
   }
 }
 
 .footer {
   background-color: $dark;
-  padding: 85px 0;
+  padding: 85px 0 50px;
 
   &-container {
     display: flex;
 
     .nav {
       display: flex;
-      flex: 1 0 50%;
 
       ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 23px 141px;
+        gap: 25px 152px;
 
         a {
           padding: 0;
@@ -688,21 +699,18 @@ body {
     }
   }
 
-  &-logo {
-    flex: 1 0 47.2%;
-  }
-
   &-navigation {
-    flex: 1 0 52.8%;
-    padding-top: 3px;
+    width: 363px;
+    height: 128px;
+    margin-left: 141px;
   }
 
   .socials {
     display: flex;
-    justify-content: flex-end;
-    flex: 1 0 50%;
-    padding-bottom: 2px;
-    align-items: flex-end;
+    width: 340px;
+    height: 48px;
+    margin-top: 76px;
+    margin-left: 373px;
 
     ul {
       display: flex;
@@ -716,7 +724,7 @@ body {
       background-position: center;
       border: 1px solid #666666;
       border-radius: 50%;
-      margin-left: 24px;
+      margin-left: 25px;
       transition: all 0.2s;
 
       &:hover {
@@ -739,6 +747,40 @@ body {
     }
     .pinterest {
       background-image: url(../assets/svg/pinterest.svg);
+    }
+  }
+
+  hr {
+    height: 3px;
+    border: none;
+    background-color: #666666;
+    margin: 52px 0 50px;
+  }
+
+  &-info {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-weight: 100;
+    font-size: 22px;
+    line-height: 22px;
+    letter-spacing: 2px;
+    color: #fff;
+
+    &-link {
+      color: inherit;
+    }
+
+    &-link:hover {
+      color: $gold;
+    }
+
+    &-link:active {
+      color: #7e6c51;
+    }
+
+    &-link:first-of-type {
+      margin-left: 63px;
     }
   }
 }

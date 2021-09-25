@@ -21,13 +21,28 @@
 .picture-inner-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   row-gap: 24px;
   column-gap: 36px;
-  height: 2850px;
+  height: 3000px;
+  margin-top: 75px;
 
   img {
     width: 456px;
+    margin-bottom: 24px;
+  }
+
+  .column {
+    height: 100%;
+    width: 456px;
+  }
+
+  .column1 img:first-child {
+    margin-top: 50px;
+  }
+
+  .column3 img:first-child {
+    margin-top: 50px;
   }
 }
