@@ -5,3 +5,4 @@ import "./js/swiper";
 import "./js/comparison-slider";
 import "./js/video-swiper";
 import "./js/section-gallery";
+import "./js/popup";

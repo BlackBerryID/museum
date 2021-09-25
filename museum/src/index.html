@@ -369,6 +369,193 @@
         </div>
       </div>
     </footer>
+    <div class="popup active">
+      <div class="popup-wrapper close-popup">
+        <form class="popup-form" action="">
+          <button class="close-popup"></button>
+          <div class="popup-content">
+            <div class="popup-booking">
+              <div class="popup-booking-title">
+                <h2>Booking tickets</h2>
+                <h4 class="title-underline">Tour to Louvre</h4>
+              </div>
+              <div class="popup-booking-inputs">
+                <input
+                  placeholder="Date"
+                  class="input-date"
+                  type="date"
+                  onchange="this.classList.toggle('has-value', this.value)"
+                />
+                <input
+                  placeholder="Time"
+                  class="input-time"
+                  type="time"
+                  onchange="this.classList.toggle('has-value', this.value)"
+                />
+                <input placeholder="Name" class="input-time" type="text" />
+                <input placeholder="E-mail" class="input-time" type="email" />
+                <input placeholder="Phone" class="input-time" type="tel" />
+                <div class="select-wrapper">
+                  <select>
+                    <option value="" disabled selected hidden>
+                      Ticket Type
+                    </option>
+                    <option>Permanent exhibition</option>
+                    <option>Temporary exhibition</option>
+                    <option>Combined Admission</option>
+                  </select>
+                </div>
+                <div class="popup-booking-entry">
+                  <h4 class="title-underline title-gold">Entry Ticket</h4>
+                  <div class="amount">
+                    <div class="tickets-wrapper">
+                      <p>Basic 18+ (20 €)</p>
+                      <div class="tickets-amount">
+                        <button
+                          class="popup-btn"
+                          onclick="this.nextElementSibling.stepDown()"
+                        >
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          min="0"
+                          max="20"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="popup-btn"
+                          onclick="this.previousElementSibling.stepUp()"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                    <div class="tickets-wrapper">
+                      <p>Senior 65+ (10 €)</p>
+                      <div class="tickets-amount">
+                        <button
+                          class="popup-btn"
+                          onclick="this.nextElementSibling.stepDown()"
+                        >
+                          −
+                        </button>
+                        <input
+                          type="number"
+                          min="0"
+                          max="20"
+                          value="1"
+                          readonly
+                        />
+                        <button
+                          class="popup-btn"
+                          onclick="this.previousElementSibling.stepUp()"
+                        >
+                          +
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="popup-overview">
+              <div class="popup-info-date">
+                <h2>Overview</h2>
+                <h4>Tour to Louvre</h4>
+                <div class="info-date">Friday, August 19</div>
+                <div class="info-time">16 : 30</div>
+                <div class="info-type">Temporary exhibition</div>
+                <img src="./assets/img/overview.jpg" alt="overview" />
+              </div>
+              <div class="popup-info-cost">
+                <div class="cost-basic">
+                  <div class="cost-info">
+                    <div class="amount-type-wrapper">
+                      <div class="cost-info-amount">2</div>
+                      <div class="cost-info-type">Basic (20 €)</div>
+                    </div>
+                    <div class="cost-info-typetotal">40 €</div>
+                  </div>
+                  <div class="cost-info">
+                    <div class="amount-type-wrapper">
+                      <div class="cost-info-amount">2</div>
+                      <div class="cost-info-type">Senior (10 €)</div>
+                    </div>
+                    <div class="cost-info-typetotal">20 €</div>
+                  </div>
+                </div>
+                <div class="cost-total">
+                  <div class="cost-total-title">Total:</div>
+                  <div class="cost-total-cost">60 €</div>
+                </div>
+                <div class="cost-senior"></div>
+              </div>
+              <div class="popup-card">
+                <div class="popup-card-back">
+                  <div class="dark-line"></div>
+                  <p class="popup-card-back-title">CVC/CVV</p>
+                  <input class="popup-card-back-input" type="number" />
+                  <p class="popup-card-back-text">
+                    The last <br />
+                    3 or 4 digits on back <br />
+                    of the card
+                  </p>
+                </div>
+                <div class="popup-card-front">
+                  <div class="popup-card-front-title">Card number</div>
+                  <input
+                    class="popup-card-front-input card-number-input"
+                    type="number"
+                  />
+                  <div class="popup-card-front-title expiration-date-title">
+                    Expiration date
+                  </div>
+                  <input
+                    class="
+                      popup-card-front-input
+                      expiration-date-input
+                      month-input
+                    "
+                    type="number"
+                    value="03"
+                  />
+                  <input
+                    class="
+                      popup-card-front-input
+                      expiration-date-input
+                      year-input
+                    "
+                    type="number"
+                    value="2024"
+                  />
+                  <div class="popup-card-front-title cardholder-name-title">
+                    Cardholder name
+                  </div>
+                  <input
+                    class="popup-card-front-input cardholder-name-input"
+                    type="text"
+                  />
+                  <img
+                    class="visa-icon"
+                    src="./assets/svg/card-visa.svg"
+                    alt="visa"
+                  />
+                  <img
+                    class="mastercard-icon"
+                    src="./assets/svg/card-mastercard.svg"
+                    alt="mastercard"
+                  />
+                </div>
+              </div>
+              <button class="book-button">Book</button>
+            </div>
+            <button class="close-popup close-popup-form"></button>
+          </div>
+        </form>
+      </div>
+    </div>
     <script src="js/progress-bar.js"></script>
   </body>
 </html>

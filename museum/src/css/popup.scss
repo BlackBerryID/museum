@@ -1,0 +1,726 @@
+.popup {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  z-index: 20;
+  overflow-y: auto;
+  overflow-x: hidden;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.8s;
+
+  &.active {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  &.active &-wrapper {
+    transform: translate(0px, 0px);
+  }
+
+  &-wrapper {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 10px;
+    transform: translate(-100%, 0px);
+    transition: all 0.8s;
+  }
+
+  &-form {
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1440px;
+    height: 845px;
+    background-color: #fff;
+  }
+
+  &-content {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 970px;
+    height: 663px;
+    background-color: #fff;
+  }
+
+  &-booking {
+    width: 400px;
+    height: 663;
+
+    &-title {
+      width: 100%;
+      height: 143px;
+
+      h2 {
+        background-image: url(../assets/svg/popup-logo.svg);
+        background-repeat: no-repeat;
+        font-family: $forum;
+        font-size: 50px;
+        font-weight: 400;
+        line-height: 55px;
+        color: $gold;
+        text-transform: uppercase;
+        padding-top: 41px;
+        padding-bottom: 15px;
+      }
+
+      h4 {
+        color: $red;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      h4::after {
+        bottom: -13px;
+      }
+    }
+
+    &-inputs {
+      margin-top: 60px;
+
+      input[type="date"] {
+        position: relative;
+        width: 190px;
+        height: 45px;
+        border: 1px solid $dark;
+        padding-left: 44px;
+        cursor: text;
+
+        &:not(:focus):not(.has-value)::before {
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 18px;
+          line-height: 21px;
+          content: attr(placeholder);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+        }
+
+        &::-webkit-datetime-edit-fields-wrapper {
+          color: $dark;
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 16px;
+          line-height: 21px;
+        }
+
+        &:not(:focus):not(.has-value)::-webkit-datetime-edit-fields-wrapper {
+          color: transparent;
+        }
+
+        &::-webkit-calendar-picker-indicator {
+          background: url(../assets/svg/input-arrow.svg);
+          background-repeat: no-repeat;
+          background-position: 4px 1px;
+          width: 20%;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 14px;
+          background: url(../assets/svg/input-date.svg);
+          background-repeat: no-repeat;
+          width: 15px;
+          height: 15px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="time"] {
+        position: relative;
+        width: 190px;
+        height: 45px;
+        border: 1px solid $dark;
+        padding-left: 44px;
+        cursor: text;
+        margin-left: 16px;
+
+        &:not(:focus):not(.has-value)::before {
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 18px;
+          line-height: 21px;
+          content: attr(placeholder);
+        }
+
+        &::before {
+          content: "";
+          position: absolute;
+        }
+
+        &::-webkit-datetime-edit-fields-wrapper {
+          color: $dark;
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 16px;
+          line-height: 21px;
+        }
+
+        &:not(:focus):not(.has-value)::-webkit-datetime-edit-fields-wrapper {
+          color: transparent;
+        }
+
+        &::-webkit-calendar-picker-indicator {
+          background: url(../assets/svg/input-arrow.svg);
+          background-repeat: no-repeat;
+          background-position: 4px 1px;
+          width: 20%;
+          cursor: pointer;
+        }
+
+        &::after {
+          content: "";
+          position: absolute;
+          left: 14px;
+          background: url(../assets/svg/input-time.svg);
+          background-repeat: no-repeat;
+          width: 15px;
+          height: 15px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="text"] {
+        position: relative;
+        width: 400px;
+        height: 45px;
+        border: 1px solid $dark;
+        padding-left: 43px;
+        cursor: text;
+        margin: 20px 0;
+        background: url(../assets/svg/input-name.svg);
+        background-repeat: no-repeat;
+        background-size: 13px 15px;
+        background-position: 14px 50%;
+
+        &,
+        &::placeholder {
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 18px;
+          line-height: 21px;
+        }
+
+        &:focus::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="email"] {
+        position: relative;
+        width: 400px;
+        height: 45px;
+        border: 1px solid $dark;
+        padding-left: 43px;
+        cursor: text;
+        background: url(../assets/svg/input-email.svg);
+        background-repeat: no-repeat;
+        background-size: 15px 11px;
+        background-position: 14px 50%;
+
+        &,
+        &::placeholder {
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 18px;
+          line-height: 21px;
+        }
+
+        &:focus::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      input[type="tel"] {
+        position: relative;
+        width: 400px;
+        height: 45px;
+        border: 1px solid $dark;
+        padding-left: 43px;
+        cursor: text;
+        margin: 20px 0;
+        background: url(../assets/svg/input-tel.svg);
+        background-repeat: no-repeat;
+        background-size: 14px 23px;
+        background-position: 14px 50%;
+
+        &,
+        &::placeholder {
+          font-family: $roboto;
+          font-weight: 400;
+          color: $dark;
+          font-size: 18px;
+          line-height: 21px;
+        }
+
+        &:focus::-webkit-input-placeholder {
+          color: transparent;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      select {
+        position: relative;
+        width: 400px;
+        height: 45px;
+        border: 1px solid $dark;
+        padding-left: 44px;
+        cursor: pointer;
+        font-family: $roboto;
+        font-weight: 400;
+        color: $dark;
+        font-size: 18px;
+        line-height: 21px;
+        background: url(../assets/svg/select-icon.svg);
+        background-repeat: no-repeat;
+        background-size: 14px 14px;
+        background-position: 14px 50%;
+        -webkit-appearance: none;
+
+        option {
+          font-weight: 300;
+          width: 400px;
+          height: 45px;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .select-wrapper::after {
+        content: url(../assets/svg/input-arrow.svg);
+        position: relative;
+        z-index: 1;
+        bottom: 31px;
+        left: 369px;
+        width: 17px;
+        height: 17px;
+      }
+    }
+
+    &-entry {
+      width: 400px;
+      height: 135px;
+      padding: 8px 15px;
+      border: 1px solid $dark;
+
+      h4 {
+        font-family: $forum;
+        font-size: 18px;
+        line-height: 20px;
+        font-weight: 400;
+      }
+
+      h4::after {
+        bottom: -7px;
+        height: 2px;
+      }
+
+      .tickets-wrapper {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .tickets-wrapper:first-child {
+        margin: 22px 0 20px;
+      }
+
+      p {
+        display: inline;
+        font-size: 18px;
+        line-height: 21px;
+        font-weight: 400;
+        padding-top: 1px;
+        margin-left: -1px;
+        padding-top: 3px;
+        margin-left: -2px;
+      }
+
+      .tickets-amount {
+        display: inline-block;
+        background-color: $dark;
+        border: 1px solid #030303;
+      }
+
+      input {
+        all: unset;
+        vertical-align: middle;
+        font-size: 18px;
+        text-align: center;
+        background-color: #fff;
+        color: $dark;
+        border: none;
+        width: 35px;
+      }
+
+      button {
+        vertical-align: middle;
+        font-weight: 400;
+        font-size: 18px;
+        color: #fff;
+        cursor: pointer;
+        background-color: $dark;
+      }
+
+      button:first-of-type {
+        padding-right: 9px;
+        padding-left: 10px;
+      }
+
+      button:last-of-type {
+        padding-right: 10px;
+        padding-left: 9px;
+      }
+    }
+  }
+
+  &-overview {
+    position: relative;
+    width: 530px;
+    height: 663px;
+    padding: 25px 30px 0 29px;
+    border: 1px solid $dark;
+
+    .popup-info {
+      &-date {
+        position: relative;
+        width: 470px;
+        height: 151px;
+
+        h2 {
+          font-weight: 500;
+          font-size: 32px;
+          line-height: 37px;
+          color: #272727;
+        }
+
+        h4 {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 26px;
+          color: #740c11;
+          opacity: 0.9;
+          margin-top: 3px;
+          margin-bottom: 11px;
+        }
+
+        div {
+          position: relative;
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 21px;
+          color: $dark;
+          padding-left: 30px;
+        }
+
+        .info-time {
+          margin-top: 6px;
+          margin-bottom: 5px;
+        }
+
+        .info-date::before,
+        .info-time::before,
+        .info-type::before {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 2px;
+          width: 15px;
+          height: 15px;
+        }
+
+        .info-date::before {
+          background: url(../assets/svg/input-date.svg);
+        }
+
+        .info-time::before {
+          background: url(../assets/svg/input-time.svg);
+        }
+
+        .info-type::before {
+          background: url(../assets/svg/info-type.svg);
+        }
+
+        img {
+          position: absolute;
+          right: 0;
+          top: -1px;
+        }
+      }
+
+      &-cost {
+        .cost-info {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 22px;
+
+          .amount-type-wrapper {
+            display: flex;
+          }
+
+          &-amount {
+            width: 32px;
+            height: 24px;
+            text-align: center;
+            background-color: $dark;
+            border-radius: 5px;
+            color: #a4a4a3;
+            padding-top: 3px;
+          }
+
+          &-type,
+          &-typetotal {
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 26px;
+            color: $dark;
+            padding-left: 10px;
+          }
+        }
+
+        .cost-info:last-child {
+          margin-top: 7px;
+        }
+
+        .cost-total {
+          display: flex;
+          justify-content: space-between;
+          border-top: 2px solid #740c11;
+          margin-top: 9px;
+          padding-top: 10px;
+
+          &-title,
+          &-cost {
+            font-weight: 400;
+            font-size: 32px;
+            line-height: 37px;
+            color: $dark;
+          }
+        }
+      }
+    }
+  }
+
+  &-card {
+    position: relative;
+    width: 470px;
+    height: 240px;
+    margin-top: 12px;
+
+    input {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 14px;
+      color: #161615;
+      border: 0.5px solid #a4a4a3;
+      padding-left: 9px;
+    }
+
+    &-back {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 360px;
+      height: 211px;
+      background-color: #939393;
+      border-radius: 5px;
+
+      &-title {
+        position: absolute;
+        right: 35px;
+        top: 85px;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #161615;
+      }
+
+      &-input {
+        position: absolute;
+        right: 20px;
+        bottom: 72px;
+        width: 75px;
+        height: 35px;
+        outline: none;
+      }
+
+      &-text {
+        position: absolute;
+        right: 30px;
+        bottom: 15px;
+        display: inline-block;
+        width: 55px;
+        height: 50px;
+        font-weight: 400;
+        font-size: 10px;
+        line-height: 12px;
+        color: #161615;
+      }
+
+      .dark-line {
+        width: 360px;
+        height: 45px;
+        margin-top: 25px;
+        background-color: #161615;
+      }
+
+      &-input::-webkit-inner-spin-button,
+      &-input::-webkit-inner-spin-button {
+        display: none;
+      }
+    }
+
+    &-front {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 360px;
+      height: 211px;
+      background-color: #bcbcbc;
+      border-radius: 5px;
+      padding: 14px 20px;
+
+      &-input {
+        outline: none;
+        margin-top: 5px;
+      }
+
+      &-title {
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: #161615;
+      }
+
+      &-input::-webkit-inner-spin-button,
+      &-input::-webkit-inner-spin-button {
+        display: none;
+      }
+
+      .card-number-input {
+        width: 215px;
+        height: 35px;
+      }
+
+      .expiration-date-input {
+        width: 100px;
+        height: 35px;
+      }
+
+      .year-input {
+        margin-left: 11px;
+      }
+
+      .cardholder-name-input {
+        width: 320px;
+        height: 35px;
+        margin-top: 4px;
+      }
+
+      .expiration-date-input::-webkit-inner-spin-button,
+      .expiration-date-input::-webkit-outer-spin-button {
+        display: block;
+        height: 35px;
+        width: 28px;
+        opacity: 1;
+      }
+
+      .expiration-date-title,
+      .cardholder-name-title {
+        margin-top: 11px;
+      }
+
+      .visa-icon {
+        position: absolute;
+        top: 33px;
+        right: 20px;
+      }
+      .mastercard-icon {
+        position: absolute;
+        top: 64px;
+        right: 20px;
+      }
+    }
+  }
+
+  .book-button {
+    position: absolute;
+    bottom: 23px;
+    right: 30px;
+    width: 220px;
+    height: 45px;
+    background-color: #710707;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    color: #fff;
+  }
+
+  .close-popup-form {
+    position: absolute;
+    top: -60px;
+    right: -205px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+  }
+
+  .close-popup-form::before,
+  .close-popup-form::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 1px;
+    background-color: $dark;
+  }
+
+  .close-popup-form::before {
+    left: -5px;
+    top: 12px;
+    transform: rotate(45deg);
+  }
+
+  .close-popup-form::after {
+    right: -5px;
+    bottom: 12px;
+    transform: rotate(-45deg);
+  }
+}
