@@ -3,6 +3,10 @@
   width: 100%;
   margin-top: 40px;
 
+  @media (max-width: 1024px) {
+    height: 222px;
+  }
+
   &-wrapper {
     height: 100% !important;
   }
@@ -14,6 +18,11 @@
       width: 452px;
       height: 254px;
       border: none;
+
+      @media (max-width: 1024px) {
+        width: 300px;
+        height: 170px;
+      }
     }
   }
 
@@ -27,6 +36,10 @@
     height: auto;
     z-index: 1;
     background: inherit;
+
+    @media (max-width: 1024px) {
+      bottom: -3px;
+    }
   }
   &-pagination {
     text-align: center;

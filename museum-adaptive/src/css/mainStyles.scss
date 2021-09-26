@@ -593,9 +593,17 @@ body {
 .video {
   padding-bottom: 71px;
 
+  @media (max-width: 1024px) {
+    padding-bottom: 59px;
+  }
+
   &-player {
     position: relative;
     height: 650px;
+
+    @media (max-width: 1024px) {
+      height: 444px;
+    }
 
     img {
       height: 100%;
@@ -611,6 +619,12 @@ body {
       left: 50%;
       transform: translate(-50%, -50%);
       transition: all 0.2s;
+
+      @media (max-width: 1024px) {
+        height: 152px;
+        width: 152px;
+        background-size: contain;
+      }
 
       &:hover {
         transform: translate(-50%, -50%) scale(1.1);
@@ -628,6 +642,11 @@ body {
     padding-top: 2px;
     background-color: #000;
 
+    @media (max-width: 1024px) {
+      height: 60px;
+      justify-content: space-evenly;
+    }
+
     .btn {
       background-repeat: no-repeat;
       background-position: center;
@@ -644,6 +663,10 @@ body {
         height: 30px;
         margin-left: 5px;
         background-image: url(../assets/svg/btn-play.svg);
+
+        @media (max-width: 1024px) {
+          margin-left: 10px;
+        }
       }
 
       &-volume {
@@ -651,6 +674,13 @@ body {
         height: 30px;
         margin-left: 2px;
         background-image: url(../assets/svg/btn-volume.svg);
+
+        @media (max-width: 1024px) {
+          width: 26px;
+          height: 20px;
+          background-size: contain;
+          margin-left: 0;
+        }
       }
 
       &-fullScreen {
@@ -658,6 +688,13 @@ body {
         height: 36px;
         margin-right: 5px;
         background-image: url(../assets/svg/btn-fullScreen.svg);
+
+        @media (max-width: 1024px) {
+          width: 26px;
+          height: 26px;
+          background-size: contain;
+          margin-right: 10px;
+        }
       }
     }
 
@@ -665,12 +702,16 @@ body {
       background: linear-gradient(
         to right,
         $red 0%,
-        $red 43%,
-        #c4c4c4 43%,
+        $red 39%,
+        #c4c4c4 39%,
         #c4c4c4 100%
       );
       height: 8px;
       -webkit-appearance: none;
+
+      @media (max-width: 1024px) {
+        height: 5px;
+      }
 
       &::-webkit-slider-thumb {
         width: 15px;
@@ -679,6 +720,11 @@ body {
         -webkit-appearance: none;
         cursor: pointer;
         background: #fff;
+
+        @media (max-width: 1024px) {
+          width: 13px;
+          height: 13px;
+        }
       }
 
       &-progress {
@@ -686,14 +732,22 @@ body {
         background: linear-gradient(
           to right,
           $red 0%,
-          $red 54%,
-          #c4c4c4 54%,
+          $red 40%,
+          #c4c4c4 40%,
           #c4c4c4 100%
         );
+
+        @media (max-width: 1024px) {
+          width: 564px;
+        }
       }
 
       &-volume {
         width: 155px;
+
+        @media (max-width: 1024px) {
+          width: 143px;
+        }
       }
     }
 
@@ -702,6 +756,10 @@ body {
       align-items: center;
       justify-content: space-between;
       width: 243px;
+
+      @media (max-width: 1024px) {
+        width: 200px;
+      }
 
       .btn-volume {
         margin-right: 20px;
@@ -712,6 +770,10 @@ body {
   .info {
     display: flex;
     margin-bottom: 76px;
+
+    @media (max-width: 1024px) {
+      margin-bottom: 32px;
+    }
 
     h2 {
       width: 50%;
@@ -724,6 +786,10 @@ body {
       font-weight: 300;
       font-size: 22px;
       line-height: 38px;
+
+      @media (max-width: 1024px) {
+        display: none;
+      }
     }
   }
 }
