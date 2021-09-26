@@ -258,6 +258,9 @@ body {
 
 .section {
   padding: 75px 0;
+  @media (max-width: 1024px) {
+    padding: 53px 0;
+  }
 }
 
 .welcom {
@@ -469,15 +472,38 @@ body {
   background-color: $dark;
   color: #fff;
 
+  @media (max-width: 1024px) {
+    padding-bottom: 60px;
+  }
+
   &-container {
     display: flex;
 
+    @media (max-width: 1024px) {
+      flex-direction: column;
+    }
+
     > div {
       width: 50%;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+      }
+    }
+
+    .img-comp-container {
+      @media (max-width: 1024px) {
+        width: 720px;
+        margin: 64px auto 0;
+      }
     }
 
     h2 {
       display: inline;
+
+      @media (max-width: 1024px) {
+        display: block;
+      }
     }
 
     p {
@@ -485,15 +511,32 @@ body {
       font-size: 22px;
       margin-right: 61px;
       line-height: 38px;
+
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        margin: 0;
+        line-height: 35px;
+      }
     }
 
     p:first-of-type {
       margin-top: 104px;
       margin-bottom: 27px;
+
+      @media (max-width: 1024px) {
+        margin-top: 76px;
+        margin-bottom: 0px;
+        line-height: 38px;
+      }
     }
 
     p:last-of-type {
       margin-top: 27px;
+
+      @media (max-width: 1024px) {
+        margin: 0;
+        display: none;
+      }
     }
 
     span {
