@@ -83,4 +83,6 @@ function initComparisons() {
   }
 }
 
-initComparisons();
+setTimeout(() => {
+  initComparisons();
+}, 50);

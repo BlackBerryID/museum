@@ -14,5 +14,6 @@ ticketBtn.addEventListener("click", openPopup);
 popupCloseItems.forEach((item) =>
   item.addEventListener("click", (e) => {
     if (e.target === item) closePopup();
+    e.preventDefault();
   })
 );

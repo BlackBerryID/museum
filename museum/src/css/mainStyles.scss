@@ -617,6 +617,7 @@ body {
       }
 
       .buyBtn {
+        position: relative;
         text-align: center;
         width: 175px;
         height: 50px;
@@ -626,6 +627,7 @@ body {
         color: #fff;
         transition: all 0.2s;
         font-weight: 300;
+        overflow: hidden;
 
         &:hover {
           background-color: $gold;
@@ -665,9 +667,12 @@ body {
       margin-bottom: 50px;
     }
 
+    a,
     p {
+      display: block;
       font-size: 22px;
-      margin-bottom: 25px;
+      margin-bottom: 24px;
+      color: inherit;
     }
 
     .map {

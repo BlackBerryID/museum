@@ -7,3 +7,5 @@ import "./js/video-swiper";
 import "./js/section-gallery";
 import "./js/popup";
 import "./js/fix";
+import "./js/console";
+import "./js/ripple-effect";

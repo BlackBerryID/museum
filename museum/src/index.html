@@ -53,8 +53,8 @@
               <div class="swiper-pagination"></div>
 
               <div class="swiper-buttons">
-                <div class="swiper-button-prev"></div>
-                <div class="swiper-button-next"></div>
+                <button class="swiper-button-prev"></button>
+                <button class="swiper-button-next"></button>
               </div>
 
               <div class="swiper-fraction">
@@ -193,7 +193,6 @@
                   height="315"
                   src="https://www.youtube.com/embed/aWmJ5DgyWPI"
                   title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -204,7 +203,6 @@
                   height="315"
                   src="https://www.youtube.com/embed/Vi5D6FKhRmo"
                   title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -215,7 +213,6 @@
                   height="315"
                   src="https://www.youtube.com/embed/NOhDysLnTvY"
                   title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -226,7 +223,6 @@
                   height="315"
                   src="https://www.youtube.com/embed/zp1BXPX8jcU"
                   title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -237,7 +233,6 @@
                   height="315"
                   src="https://www.youtube.com/embed/2OR0OCr6uRE"
                   title="YouTube video player"
-                  frameborder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowfullscreen
                 ></iframe>
@@ -245,8 +240,12 @@
             </div>
 
             <div class="swiper-controls video-swiper-controls">
-              <div class="swiper-button-prev video-swiper-button-prev"></div>
-              <div class="swiper-button-next video-swiper-button-next"></div>
+              <button
+                class="swiper-button-prev video-swiper-button-prev"
+              ></button>
+              <button
+                class="swiper-button-next video-swiper-button-next"
+              ></button>
               <div class="video-swiper-pagination"></div>
             </div>
           </div>
@@ -319,7 +318,7 @@
                 <div class="total">
                   Total €<span class="total-price">220</span>
                 </div>
-                <button class="buyBtn">Buy Now</button>
+                <button class="buyBtn ripple">Buy Now</button>
               </div>
             </div>
           </div>
@@ -336,8 +335,8 @@
                 Musee du Louvre
               </h4>
               <p>address: 75001 Paris, France</p>
-              <p>phone: +33(0) 1 40 20 50 50</p>
-              <p>mail: info@louvre.fr</p>
+              <a href="tel:+330140205050">phone: +33(0) 1 40 20 50 50</a>
+              <a href="mailto:info@louvre.fr">mail: info@louvre.fr</a>
             </div>
             <div class="map">
               <img src="./assets/img/map.png" alt="map" />
@@ -386,9 +385,9 @@
         </div>
       </div>
     </footer>
-    <div class="popup">
-      <div class="popup-wrapper close-popup">
-        <form class="popup-form" action="">
+    <div class="popup popup-transition">
+      <div class="popup-wrapper close-popup popup-transition">
+        <form class="popup-form" action="#">
           <button class="close-popup"></button>
           <div class="popup-content">
             <div class="popup-booking">
@@ -398,13 +397,11 @@
               </div>
               <div class="popup-booking-inputs">
                 <input
-                  placeholder="Date"
                   class="input-date"
                   type="date"
                   onchange="this.classList.toggle('has-value', this.value)"
                 />
                 <input
-                  placeholder="Time"
                   class="input-time"
                   type="time"
                   onchange="this.classList.toggle('has-value', this.value)"
