@@ -356,11 +356,19 @@ body {
     height: 3px;
     width: 100%;
     background-color: $red;
+
+    @media (max-width: 1024px) {
+      bottom: -15px;
+    }
   }
 }
 
 .visiting {
   padding: 74px 0;
+
+  @media (max-width: 1024px) {
+    padding: 53px 0 59px;
+  }
 }
 
 .cards {
@@ -369,14 +377,29 @@ body {
   gap: 76px 60px;
   margin-top: 105px;
 
+  @media (max-width: 1024px) {
+    justify-content: space-evenly;
+    gap: 60px 0px;
+    margin-top: 76px;
+  }
+
   .cards-item {
     display: block;
     width: 440px;
     color: #000;
 
+    @media (max-width: 1024px) {
+      width: 330px;
+    }
+
     img {
       width: 440px;
       height: 285px;
+
+      @media (max-width: 1024px) {
+        width: 100%;
+        height: auto;
+      }
     }
 
     h3 {
@@ -387,6 +410,18 @@ body {
       letter-spacing: 5px;
       text-transform: uppercase;
       margin-top: 20px;
+      color: #000;
+
+      @media (max-width: 1024px) {
+        font-size: 28px;
+        margin-top: 22px;
+      }
+    }
+
+    &.letter-spacing-3 h3 {
+      @media (max-width: 1024px) {
+        letter-spacing: 3px;
+      }
     }
 
     h3:after {
@@ -398,17 +433,30 @@ body {
       width: 68%;
       background-color: $red;
       transition: all 0.7s;
+
+      @media (max-width: 1024px) {
+        width: 45%;
+      }
     }
 
     p:first-of-type {
       font-weight: 100;
       font-size: 22px;
       margin: 22px 0 9px;
+
+      @media (max-width: 1024px) {
+        font-size: 20px;
+        margin: 20px 0 11px;
+      }
     }
 
     p {
       font-weight: 100;
       font-size: 18px;
+
+      @media (max-width: 1024px) {
+        font-size: 16px;
+      }
     }
 
     &:hover h3:after {
