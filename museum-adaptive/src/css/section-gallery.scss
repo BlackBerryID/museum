@@ -16,6 +16,10 @@
   position: relative;
   height: 2125px;
   overflow: hidden;
+
+  @media (max-width: 1024px) {
+    height: 1410px;
+  }
 }
 
 .picture-inner-container {
@@ -28,14 +32,26 @@
   height: 3000px;
   margin-top: 75px;
 
+  @media (max-width: 1024px) {
+    margin-top: 54px;
+  }
+
   img {
     width: 456px;
     margin-bottom: 24px;
+
+    @media (max-width: 1024px) {
+      width: 304px;
+    }
   }
 
   .column {
     height: 100%;
     width: 456px;
+
+    @media (max-width: 1024px) {
+      width: 304px;
+    }
   }
 
   .column1 img:first-child {
