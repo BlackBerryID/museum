@@ -37,6 +37,8 @@
           rgba(0, 0, 0, 0) 30.73%
         ),
         url(../assets/img/welcome-slider/2.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     &-3 {
       background: linear-gradient(
@@ -46,6 +48,8 @@
           rgba(0, 0, 0, 0) 30.73%
         ),
         url(../assets/img/welcome-slider/3.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     &-4 {
       background: linear-gradient(
@@ -55,6 +59,8 @@
           rgba(0, 0, 0, 0) 30.73%
         ),
         url(../assets/img/welcome-slider/4.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
     &-5 {
       background: linear-gradient(
@@ -64,6 +70,8 @@
           rgba(0, 0, 0, 0) 30.73%
         ),
         url(../assets/img/welcome-slider/5.jpg);
+      background-repeat: no-repeat;
+      background-size: contain;
     }
   }
 

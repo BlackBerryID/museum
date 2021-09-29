@@ -706,6 +706,11 @@
     width: 25px;
     height: 25px;
     cursor: pointer;
+
+    @media (max-width: 1024px) {
+      top: -45px;
+      right: 0px;
+    }
   }
 
   .close-popup-form::before,
