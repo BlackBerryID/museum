@@ -444,6 +444,10 @@ body {
     @media (max-width: 1024px) {
       bottom: -15px;
     }
+
+    @media (max-width: 768px) {
+      bottom: -23px;
+    }
   }
 }
 
@@ -452,6 +456,10 @@ body {
 
   @media (max-width: 1024px) {
     padding: 53px 0 59px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 40px 0 80px;
   }
 }
 
@@ -467,6 +475,11 @@ body {
     margin-top: 76px;
   }
 
+  @media (max-width: 768px) {
+    margin-top: 62px;
+    gap: 40px 0px;
+  }
+
   .cards-item {
     display: block;
     width: 440px;
@@ -474,6 +487,10 @@ body {
 
     @media (max-width: 1024px) {
       width: 330px;
+    }
+
+    @media (max-width: 768px) {
+      width: 280px;
     }
 
     img {
@@ -500,6 +517,13 @@ body {
         font-size: 28px;
         margin-top: 22px;
       }
+
+      @media (max-width: 768px) {
+        font-size: 22px;
+        line-height: 24px;
+        letter-spacing: 3px;
+        margin-top: 20px;
+      }
     }
 
     &.letter-spacing-3 h3 {
@@ -513,13 +537,17 @@ body {
       position: absolute;
       left: 0;
       bottom: -12px;
-      height: 3px;
+      height: 2px;
       width: 68%;
       background-color: $red;
       transition: all 0.7s;
 
       @media (max-width: 1024px) {
         width: 45%;
+      }
+
+      @media (max-width: 1024px) {
+        width: 53%;
       }
     }
 
@@ -531,6 +559,10 @@ body {
       @media (max-width: 1024px) {
         font-size: 20px;
         margin: 20px 0 11px;
+      }
+      @media (max-width: 768px) {
+        font-size: 18px;
+        margin: 22px 0 9px;
       }
     }
 
