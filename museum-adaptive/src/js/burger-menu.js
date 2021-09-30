@@ -31,7 +31,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-window.addEventListener("resize", () => {
-  headerNav.style.setProperty("transition", "");
-  setTimeout(() => headerNav.style.setProperty("transition", "all 0.8s"), 1000);
-});
+// window.addEventListener("resize", () => {
+//   headerNav.style.setProperty("transition", "");
+//   setTimeout(() => headerNav.style.setProperty("transition", "all 0.8s"), 1000);
+// });

@@ -26,6 +26,24 @@ function initComparisons() {
     /*position the slider in the middle:*/
     slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
     slider.style.left = w / 2 - slider.offsetWidth / 2 + 80 + "px";
+
+    //!fix slider position
+    // window.addEventListener("resize", () => {
+    //   if (window.innerWidth > 768) {
+    //     slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
+    //     slider.style.left = w / 2 - slider.offsetWidth / 2 + 80 + "px";
+    //     img.style.width =
+    //       parseFloat(slider.style.left) + slider.offsetWidth / 2 + "px";
+    //     console.log(window.innerWidth);
+    //   } else {
+    //     slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
+    //     slider.style.left = w / 2 - slider.offsetWidth / 2 + "px";
+    //     img.style.width =
+    //       parseFloat(slider.style.left) + slider.offsetWidth / 2 + "px";
+    //     console.log(window.innerWidth);
+    //   }
+    // });
+
     // set the initial overlay width
     img.style.width =
       parseFloat(slider.style.left) + slider.offsetWidth / 2 + "px";
