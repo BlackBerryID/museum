@@ -6,11 +6,10 @@ const navLinks = document.querySelectorAll(".nav-link-top");
 
 function toggleMenu() {
   if (!header.classList.contains("menuOpen")) {
-    headerNav.style.transition = "all 0.8s, opacity 0s";
+    headerNav.style.transition = "all 0.8s";
     body.classList.add("menuOpen");
     header.classList.add("menuOpen");
   } else {
-    headerNav.style.transition = "all 0.8s";
     header.classList.remove("menuOpen");
     body.classList.remove("menuOpen");
   }
@@ -30,4 +29,9 @@ document.addEventListener("click", (e) => {
   ) {
     toggleMenu();
   }
+});
+
+window.addEventListener("resize", () => {
+  headerNav.style.setProperty("transition", "");
+  setTimeout(() => headerNav.style.setProperty("transition", "all 0.8s"), 1000);
 });

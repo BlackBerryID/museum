@@ -8,11 +8,20 @@
     height: 585px;
   }
 
+  @media (max-width: 768px) {
+    width: 728px;
+    height: 645px;
+  }
+
   &-wrapper {
     height: 750px !important;
 
     @media (max-width: 1024px) {
       height: 525px !important;
+    }
+
+    @media (max-width: 768px) {
+      height: 546px !important;
     }
   }
 
@@ -28,6 +37,10 @@
 
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (max-width: 768px) {
+        background-image: url(../assets/img/welcome-slider/1.jpg);
+      }
     }
     &-2 {
       background: linear-gradient(
@@ -39,6 +52,10 @@
         url(../assets/img/welcome-slider/2.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (max-width: 768px) {
+        background-image: url(../assets/img/welcome-slider/2.jpg);
+      }
     }
     &-3 {
       background: linear-gradient(
@@ -50,6 +67,10 @@
         url(../assets/img/welcome-slider/3.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (max-width: 768px) {
+        background-image: url(../assets/img/welcome-slider/3.jpg);
+      }
     }
     &-4 {
       background: linear-gradient(
@@ -61,6 +82,10 @@
         url(../assets/img/welcome-slider/4.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (max-width: 768px) {
+        background-image: url(../assets/img/welcome-slider/4.jpg);
+      }
     }
     &-5 {
       background: linear-gradient(
@@ -72,6 +97,10 @@
         url(../assets/img/welcome-slider/5.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+
+      @media (max-width: 768px) {
+        background-image: url(../assets/img/welcome-slider/5.jpg);
+      }
     }
   }
 
@@ -87,6 +116,11 @@
 
     @media (max-width: 1024px) {
       width: 700px;
+    }
+
+    @media (max-width: 768px) {
+      height: 100px;
+      right: 12%;
     }
   }
 
