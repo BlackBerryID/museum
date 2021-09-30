@@ -332,6 +332,12 @@ body {
     @media (max-width: 1024px) {
       padding-top: 49px;
     }
+
+    @media (max-width: 768px) {
+      position: relative;
+      padding-top: 0;
+      text-align: center;
+    }
   }
 
   &-container {
@@ -339,6 +345,12 @@ body {
 
     @media (max-width: 1024px) {
       height: 585px;
+    }
+
+    @media (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      height: 861px;
     }
   }
 
@@ -351,6 +363,11 @@ body {
     @media (max-width: 1024px) {
       font-size: 24px;
       padding: 26px 0 51px;
+    }
+
+    @media (max-width: 768px) {
+      font-size: 20px;
+      padding: 24px 0 47px;
     }
   }
 
@@ -376,6 +393,10 @@ body {
       height: 60px;
     }
 
+    @media (max-width: 768px) {
+      display: none;
+    }
+
     &:hover {
       background-color: $gold;
     }
@@ -392,6 +413,11 @@ body {
 
   @media (max-width: 1024px) {
     font-size: 50px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 40px;
+    line-height: 60px;
   }
 
   &-gold {

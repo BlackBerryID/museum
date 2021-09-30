@@ -21,15 +21,15 @@ navLinks.forEach((item) =>
     window.innerWidth <= 1024 ? toggleMenu() : ""
   )
 );
-// document.addEventListener("click", (e) => {
-//   if (
-//     e.target != headerNav &&
-//     body.classList.contains("menuOpen") &&
-//     e.target != menuBtn
-//   ) {
-//     toggleMenu();
-//   }
-// });
+document.addEventListener("click", (e) => {
+  if (
+    e.target != headerNav &&
+    body.classList.contains("menuOpen") &&
+    e.target != menuBtn
+  ) {
+    toggleMenu();
+  }
+});
 
 window.addEventListener("resize", () => {
   headerNav.style.setProperty("transition", "");
