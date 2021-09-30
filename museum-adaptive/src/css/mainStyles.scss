@@ -33,6 +33,10 @@ body {
   @media (max-width: 1024px) {
     max-width: 984px;
   }
+
+  @media (max-width: 768px) {
+    max-width: 728px;
+  }
 }
 
 .header {
@@ -49,12 +53,20 @@ body {
     @media (max-width: 1024px) {
       height: 130px;
     }
+
+    @media (max-width: 768px) {
+      height: 110px;
+    }
   }
 
   &.menuOpen {
     .logo {
       @media (max-width: 1024px) {
         padding-left: 69px;
+      }
+
+      @media (max-width: 768px) {
+        padding-left: 74px;
       }
     }
 
@@ -74,7 +86,6 @@ body {
 
     .header-nav {
       left: 0;
-      opacity: 1;
     }
   }
 
@@ -138,6 +149,10 @@ body {
   background-repeat: no-repeat;
   transition: all 0.8s, filter 0.2s;
 
+  @media (max-width: 768px) {
+    margin-top: 8px;
+  }
+
   &:hover {
     cursor: pointer;
     filter: invert(57%) sepia(44%) saturate(261%) hue-rotate(356deg)
@@ -156,16 +171,22 @@ body {
       top: 130px;
       left: -297px;
       max-width: 297px;
-      // -130px header height
-      // height: calc(100vh - 130px);
       height: 585px;
       background-color: $dark;
       z-index: 3;
-      // opacity: 0;
+    }
+
+    @media (max-width: 768px) {
+      position: absolute;
+      top: 110px;
+      left: -100%;
+      width: 100%;
+      max-width: 100%;
+      height: 861px;
     }
   }
 
-  ul {
+  ul.nav-links-list-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -240,6 +261,53 @@ body {
     li:first-child .nav-link {
       padding-left: 0;
     }
+  }
+}
+
+.menu-images {
+  display: none;
+
+  @media (max-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 11px auto 0;
+    padding-bottom: 35px;
+    max-width: 658px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+  }
+}
+
+.menu-image {
+  &-1 {
+    max-width: 658px;
+    max-height: 194px;
+    margin-bottom: 20px;
+  }
+
+  &-2,
+  &-3 {
+    max-width: 319px;
+    max-height: 161px;
+  }
+
+  &-3 {
+    margin-left: 20px;
+  }
+}
+
+.socials.menu-socials {
+  display: none;
+  @media (max-width: 768px) {
+    display: block;
+    margin: 34px auto 0;
+  }
+
+  ul {
+    width: 100%;
+  }
+
+  li:first-child a {
+    margin-left: 0;
   }
 }
 
@@ -1166,56 +1234,6 @@ body {
     }
   }
 
-  .socials {
-    display: flex;
-    width: 340px;
-    height: 48px;
-    margin-top: 76px;
-    margin-left: 373px;
-
-    @media (max-width: 1024px) {
-      margin-top: 84px;
-      margin-left: 57px;
-    }
-
-    ul {
-      display: flex;
-    }
-
-    a {
-      display: block;
-      width: 48px;
-      height: 48px;
-      background-repeat: no-repeat;
-      background-position: center;
-      border: 1px solid #666666;
-      border-radius: 50%;
-      margin-left: 25px;
-      transition: all 0.2s;
-
-      &:hover {
-        filter: invert(57%) sepia(8%) saturate(1427%) hue-rotate(356deg)
-          brightness(93%) contrast(89%);
-      }
-    }
-
-    .youtube {
-      background-image: url(../assets/svg/youtube.svg);
-    }
-    .instagram {
-      background-image: url(../assets/svg/instagram.svg);
-    }
-    .facebook {
-      background-image: url(../assets/svg/facebook.svg);
-    }
-    .twitter {
-      background-image: url(../assets/svg/twitter.svg);
-    }
-    .pinterest {
-      background-image: url(../assets/svg/pinterest.svg);
-    }
-  }
-
   hr {
     height: 3px;
     border: none;
@@ -1252,5 +1270,55 @@ body {
     &-link:first-of-type {
       margin-left: 63px;
     }
+  }
+}
+
+.socials {
+  display: flex;
+  width: 340px;
+  height: 48px;
+  margin-top: 76px;
+  margin-left: 373px;
+
+  @media (max-width: 1024px) {
+    margin-top: 84px;
+    margin-left: 57px;
+  }
+
+  ul {
+    display: flex;
+  }
+
+  a {
+    display: block;
+    width: 48px;
+    height: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: 1px solid #666666;
+    border-radius: 50%;
+    margin-left: 25px;
+    transition: all 0.2s;
+
+    &:hover {
+      filter: invert(57%) sepia(8%) saturate(1427%) hue-rotate(356deg)
+        brightness(93%) contrast(89%);
+    }
+  }
+
+  .youtube {
+    background-image: url(../assets/svg/youtube.svg);
+  }
+  .instagram {
+    background-image: url(../assets/svg/instagram.svg);
+  }
+  .facebook {
+    background-image: url(../assets/svg/facebook.svg);
+  }
+  .twitter {
+    background-image: url(../assets/svg/twitter.svg);
+  }
+  .pinterest {
+    background-image: url(../assets/svg/pinterest.svg);
   }
 }
