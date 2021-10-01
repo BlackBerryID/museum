@@ -19,6 +19,18 @@ const videoSwiper = new Swiper(".video-swiper", {
     clickable: true,
   },
 
+  breakpoints: {
+    769: {
+      slidesPerView: 3,
+      spaceBetween: 42,
+    },
+
+    300: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+  },
+
   slidesPerView: 3,
   spaceBetween: 42,
   allowTouchMove: false,

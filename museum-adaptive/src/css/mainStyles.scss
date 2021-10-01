@@ -734,12 +734,20 @@ body {
     padding-bottom: 59px;
   }
 
+  @media (max-width: 768px) {
+    padding: 40px 0 62px;
+  }
+
   &-player {
     position: relative;
     height: 650px;
 
     @media (max-width: 1024px) {
       height: 444px;
+    }
+
+    @media (max-width: 768px) {
+      height: 329px;
     }
 
     img {
@@ -763,6 +771,11 @@ body {
         background-size: contain;
       }
 
+      @media (max-width: 768px) {
+        height: 80px;
+        width: 80px;
+      }
+
       &:hover {
         transform: translate(-50%, -50%) scale(1.1);
       }
@@ -782,6 +795,12 @@ body {
     @media (max-width: 1024px) {
       height: 60px;
       justify-content: space-evenly;
+    }
+
+    @media (max-width: 768px) {
+      position: relative;
+      margin-top: -2px;
+      padding-top: 6px;
     }
 
     .btn {
@@ -804,12 +823,19 @@ body {
         @media (max-width: 1024px) {
           margin-left: 10px;
         }
+
+        @media (max-width: 768px) {
+          height: 29px;
+          margin-left: 0;
+          margin-right: 3px;
+        }
       }
 
       &-volume {
         width: 38px;
         height: 30px;
         margin-left: 2px;
+        margin-right: 20px;
         background-image: url(../assets/svg/btn-volume.svg);
 
         @media (max-width: 1024px) {
@@ -817,6 +843,12 @@ body {
           height: 20px;
           background-size: contain;
           margin-left: 0;
+        }
+
+        @media (max-width: 768px) {
+          width: 27px;
+          height: 21px;
+          margin-right: 0;
         }
       }
 
@@ -831,6 +863,12 @@ body {
           height: 26px;
           background-size: contain;
           margin-right: 10px;
+        }
+
+        @media (max-width: 768px) {
+          margin-right: 0;
+          width: 27px;
+          height: 27px;
         }
       }
     }
@@ -877,6 +915,19 @@ body {
         @media (max-width: 1024px) {
           width: 564px;
         }
+
+        @media (max-width: 768px) {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          background: linear-gradient(
+            to right,
+            $red 0%,
+            $red 31%,
+            #c4c4c4 31%,
+            #c4c4c4 100%
+          );
+        }
       }
 
       &-volume {
@@ -884,6 +935,10 @@ body {
 
         @media (max-width: 1024px) {
           width: 143px;
+        }
+
+        @media (max-width: 768px) {
+          width: 486px;
         }
       }
     }
@@ -898,8 +953,8 @@ body {
         width: 200px;
       }
 
-      .btn-volume {
-        margin-right: 20px;
+      @media (max-width: 768px) {
+        width: 550px;
       }
     }
   }
@@ -910,6 +965,10 @@ body {
 
     @media (max-width: 1024px) {
       margin-bottom: 32px;
+    }
+
+    @media (max-width: 768px) {
+      margin-bottom: 20px;
     }
 
     h2 {
