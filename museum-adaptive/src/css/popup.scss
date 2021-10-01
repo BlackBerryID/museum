@@ -38,6 +38,11 @@
     width: 1440px;
     height: 845px;
     background-color: #fff;
+
+    @media (max-width: 768px) {
+      width: 590px;
+      height: 1479px;
+    }
   }
 
   &-content {
@@ -47,11 +52,23 @@
     width: 970px;
     height: 663px;
     background-color: #fff;
+
+    @media (max-width: 768px) {
+      width: 530px;
+      height: 1360px;
+      flex-direction: column;
+      margin-top: 42px;
+    }
   }
 
   &-booking {
     width: 400px;
-    height: 663;
+    height: 663px;
+
+    @media (max-width: 768px) {
+      width: 530px;
+      height: 643px;
+    }
 
     &-title {
       width: 100%;
@@ -85,6 +102,10 @@
     &-inputs {
       margin-top: 60px;
 
+      @media (max-width: 768px) {
+        margin-top: 40px;
+      }
+
       input[type="date"] {
         position: relative;
         width: 190px;
@@ -92,6 +113,10 @@
         border: 1px solid $dark;
         padding-left: 44px;
         cursor: text;
+
+        @media (max-width: 768px) {
+          width: 250px;
+        }
 
         &:not(:focus):not(.has-value)::before {
           font-family: $roboto;
@@ -126,6 +151,10 @@
           background-position: 4px 1px;
           width: 20%;
           cursor: pointer;
+
+          @media (max-width: 768px) {
+            background-position: 16px 3px;
+          }
         }
 
         &::after {
@@ -152,6 +181,11 @@
         cursor: text;
         margin-left: 16px;
 
+        @media (max-width: 768px) {
+          width: 250px;
+          margin-left: 25px;
+        }
+
         &:not(:focus):not(.has-value)::before {
           font-family: $roboto;
           font-weight: 400;
@@ -185,6 +219,10 @@
           background-position: 4px 1px;
           width: 20%;
           cursor: pointer;
+
+          @media (max-width: 768px) {
+            background-position: 16px 3px;
+          }
         }
 
         &::after {
@@ -214,6 +252,10 @@
         background-repeat: no-repeat;
         background-size: 13px 15px;
         background-position: 14px 50%;
+
+        @media (max-width: 768px) {
+          width: 530px;
+        }
 
         &,
         &::placeholder {
@@ -245,6 +287,10 @@
         background-size: 15px 11px;
         background-position: 14px 50%;
 
+        @media (max-width: 768px) {
+          width: 530px;
+        }
+
         &,
         &::placeholder {
           font-family: $roboto;
@@ -275,6 +321,10 @@
         background-repeat: no-repeat;
         background-size: 14px 23px;
         background-position: 14px 50%;
+
+        @media (max-width: 768px) {
+          width: 530px;
+        }
 
         &,
         &::placeholder {
@@ -312,6 +362,10 @@
         background-position: 14px 50%;
         -webkit-appearance: none;
 
+        @media (max-width: 768px) {
+          width: 530px;
+        }
+
         option {
           font-weight: 300;
           width: 400px;
@@ -331,6 +385,10 @@
         left: 369px;
         width: 17px;
         height: 17px;
+
+        @media (max-width: 768px) {
+          left: 497px;
+        }
       }
     }
 
@@ -339,6 +397,12 @@
       height: 135px;
       padding: 8px 15px;
       border: 1px solid $dark;
+
+      @media (max-width: 768px) {
+        width: 530px;
+        height: 133px;
+        padding: 6px 15px;
+      }
 
       h4 {
         font-family: $forum;
@@ -418,6 +482,11 @@
     padding: 25px 30px 0 29px;
     border: 1px solid $dark;
 
+    @media (max-width: 768px) {
+      height: 665px;
+      padding: 22px 14px;
+    }
+
     .popup-info {
       &-date {
         position: relative;
@@ -482,6 +551,10 @@
           position: absolute;
           right: 0;
           top: -1px;
+
+          @media (max-width: 768px) {
+            right: -29px;
+          }
         }
       }
 
@@ -544,6 +617,10 @@
     height: 240px;
     margin-top: 12px;
 
+    @media (max-width: 768px) {
+      margin-top: 15px;
+    }
+
     input {
       font-weight: 400;
       font-size: 12px;
@@ -561,6 +638,10 @@
       height: 211px;
       background-color: #939393;
       border-radius: 5px;
+
+      @media (max-width: 768px) {
+        right: -30px;
+      }
 
       &-title {
         position: absolute;
@@ -694,6 +775,13 @@
     cursor: pointer;
     transition: all 0.2s;
 
+    @media (max-width: 768px) {
+      bottom: 26px;
+      right: 14px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+
     &:hover {
       background-color: $gold;
     }
@@ -710,6 +798,10 @@
     @media (max-width: 1024px) {
       top: -45px;
       right: 0px;
+    }
+
+    @media (max-width: 768px) {
+      top: -50px;
     }
   }
 
