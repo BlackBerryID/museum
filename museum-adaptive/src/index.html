@@ -322,10 +322,24 @@
           <h2 class="title title-underline title-gold">Buy tickets</h2>
           <div class="content">
             <div class="picture">
-              <img
-                src="./assets/img/picture-tickets-section.jpg"
-                alt="picture"
-              />
+              <picture>
+                <source
+                  srcset="./assets/img/picture-tickets-section-1920.jpg"
+                  media="(min-width: 1025px)"
+                />
+                <source
+                  srcset="./assets/img/picture-tickets-section-1024.jpg"
+                  media="(min-width: 769px)"
+                />
+                <source
+                  srcset="./assets/img/picture-tickets-section-768.jpg"
+                  media="(min-width: 421px)"
+                />
+                <img
+                  src="./assets/img/picture-tickets-section-420.jpg"
+                  alt="picture"
+                />
+              </picture>
             </div>
             <div class="tickets-order">
               <div class="ticket-type">

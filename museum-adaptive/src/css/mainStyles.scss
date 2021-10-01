@@ -1005,6 +1005,11 @@ body {
     padding-bottom: 55px;
   }
 
+  @media (max-width: 768px) {
+    padding-top: 35px;
+    padding-bottom: 40px;
+  }
+
   .title-underline {
     top: 4px;
 
@@ -1013,6 +1018,10 @@ body {
 
       @media (max-width: 1024px) {
         bottom: -15px;
+      }
+
+      @media (max-width: 768px) {
+        bottom: -24px;
       }
     }
   }
@@ -1024,10 +1033,19 @@ body {
     @media (max-width: 1024px) {
       margin-top: 77px;
     }
+
+    @media (max-width: 768px) {
+      margin-top: 65px;
+    }
   }
 
   .picture {
     margin-top: 2px;
+
+    @media (max-width: 768px) {
+      width: 444px;
+      height: 340px;
+    }
   }
 
   &-order {
@@ -1041,11 +1059,20 @@ body {
       width: 100%;
     }
 
+    @media (max-width: 1024px) {
+      display: block;
+      width: auto;
+    }
+
     h4 {
       font-size: 28px;
 
       @media (max-width: 1024px) {
         margin-right: 25px;
+      }
+
+      @media (max-width: 768px) {
+        margin-right: 15px;
       }
     }
 
@@ -1124,6 +1151,10 @@ body {
           margin-left: 50px;
           margin-top: -4px;
         }
+
+        @media (max-width: 768px) {
+          margin-left: 60px;
+        }
       }
 
       p {
@@ -1138,11 +1169,19 @@ body {
           margin-right: 30px;
         }
 
+        @media (max-width: 768px) {
+          margin-right: 20px;
+        }
+
         &:first-of-type {
           margin-top: 25px;
 
           @media (max-width: 1024px) {
             margin-top: 28px;
+          }
+
+          @media (max-width: 768px) {
+            margin-top: 38px;
           }
         }
 
@@ -1152,6 +1191,11 @@ body {
           @media (max-width: 1024px) {
             margin-top: 30px;
             margin-right: 21px;
+          }
+
+          @media (max-width: 768px) {
+            margin-top: 26px;
+            margin-right: 12px;
           }
         }
       }
@@ -1207,6 +1251,10 @@ body {
           margin: 25px 0 69px 41px;
         }
 
+        @media (max-width: 768px) {
+          margin: 39px 0 40px 51px;
+        }
+
         .total-price {
           @media (max-width: 1024px) {
             margin-left: 16px;
@@ -1231,6 +1279,10 @@ body {
           margin-left: 51px;
           padding-top: 2px !important;
           padding-left: 1px !important;
+        }
+
+        @media (max-width: 768px) {
+          margin-left: 61px;
         }
 
         &:hover {
