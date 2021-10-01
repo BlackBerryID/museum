@@ -406,7 +406,21 @@
               <a href="mailto:info@louvre.fr">mail: info@louvre.fr</a>
             </div>
             <div class="map">
-              <img src="./assets/img/map.png" alt="map" />
+              <picture>
+                <source
+                  srcset="./assets/img/map-1920.png"
+                  media="(min-width: 1025px)"
+                />
+                <source
+                  srcset="./assets/img/map-1024.png"
+                  media="(min-width: 769px)"
+                />
+                <source
+                  srcset="./assets/img/map-768.png"
+                  media="(min-width: 421px)"
+                />
+                <img src="./assets/img/map-420.png" alt="map" />
+              </picture>
             </div>
           </div>
         </div>

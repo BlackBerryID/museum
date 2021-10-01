@@ -1300,6 +1300,10 @@ body {
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+
+  @media (max-width: 768px) {
+    height: 300px;
+  }
 }
 
 .contacts {
@@ -1308,6 +1312,10 @@ body {
   @media (max-width: 1024px) {
     padding-top: 56px;
     padding-bottom: 63px;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 42px;
   }
 
   h2 {
@@ -1323,6 +1331,11 @@ body {
       margin-top: 73px;
     }
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+      margin-top: 61px;
+    }
+
     .info {
       flex: 1 0 33.33%;
 
@@ -1330,6 +1343,18 @@ body {
         display: block;
         flex: none;
         margin-right: 38px;
+      }
+    }
+
+    & a:first-of-type {
+      @media (max-width: 768px) {
+        margin-left: -2px;
+      }
+    }
+
+    & a:last-of-type {
+      @media (max-width: 768px) {
+        margin-bottom: 39px;
       }
     }
 
@@ -1341,6 +1366,11 @@ body {
       @media (max-width: 1024px) {
         font-size: 24px;
         margin-bottom: 32px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 20px;
+        margin-bottom: 40px;
       }
     }
 
@@ -1354,6 +1384,10 @@ body {
       @media (max-width: 1024px) {
         font-size: 20px;
         margin-bottom: 14px;
+      }
+
+      @media (max-width: 768px) {
+        font-size: 18px;
       }
     }
 
