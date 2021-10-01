@@ -714,18 +714,26 @@ body {
     display: block;
     position: absolute;
     width: 5px;
-    height: 332px;
+    height: 335px;
     background-color: #fff;
   }
 
   &-slider::before {
     left: 12px;
-    top: -335px;
+    top: -338px;
+    @media (max-width: 768px) {
+      height: 348px;
+      top: -350px;
+    }
   }
 
   &-slider::after {
     left: 12px;
     top: 33px;
+    height: 332px;
+    @media (max-width: 768px) {
+      height: 322px;
+    }
   }
 }
 
