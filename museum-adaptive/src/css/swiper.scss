@@ -1,20 +1,23 @@
 .swiper {
-  width: 1000px;
+  max-width: 1000px;
   height: 810px;
   margin-right: 0 !important;
+  margin-left: 400px !important;
 
   @media (max-width: 1024px) {
-    width: 700px;
+    max-width: 700px;
     height: 585px;
+    margin-left: 284px !important;
   }
 
   @media (max-width: 768px) {
-    width: 728px;
+    max-width: 728px;
     height: 645px;
+    margin-left: 0 !important;
   }
 
   @media (max-width: 420px) {
-    width: 380px;
+    max-width: 380px;
     height: 365px;
   }
 
@@ -46,6 +49,7 @@
 
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
 
       @media (max-width: 768px) {
         background-image: url(../assets/img/welcome-slider/1.jpg);
@@ -61,6 +65,7 @@
         url(../assets/img/welcome-slider/2.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
 
       @media (max-width: 768px) {
         background-image: url(../assets/img/welcome-slider/2.jpg);
@@ -76,6 +81,7 @@
         url(../assets/img/welcome-slider/3.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
 
       @media (max-width: 768px) {
         background-image: url(../assets/img/welcome-slider/3.jpg);
@@ -91,6 +97,7 @@
         url(../assets/img/welcome-slider/4.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
 
       @media (max-width: 768px) {
         background-image: url(../assets/img/welcome-slider/4.jpg);
@@ -106,6 +113,7 @@
         url(../assets/img/welcome-slider/5.jpg);
       background-repeat: no-repeat;
       background-size: contain;
+      background-position: center;
 
       @media (max-width: 768px) {
         background-image: url(../assets/img/welcome-slider/5.jpg);
@@ -127,15 +135,24 @@
       width: 700px;
     }
 
+    @media (max-width: 820px) {
+      right: -30px;
+    }
+
     @media (max-width: 768px) {
       height: 100px;
       right: 12%;
+    }
+
+    @media (max-width: 490px) {
+      right: -75px;
     }
 
     @media (max-width: 420px) {
       height: 40px;
       width: 230px;
       bottom: -1px;
+      right: 12%;
     }
   }
 
