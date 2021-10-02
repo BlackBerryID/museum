@@ -35,6 +35,10 @@ body {
   @media (max-width: 768px) {
     max-width: 728px;
   }
+
+  @media (max-width: 420px) {
+    max-width: 380px;
+  }
 }
 
 .header {
@@ -303,6 +307,18 @@ body {
   &-3 {
     margin-left: 20px;
   }
+
+  &-1,
+  &-2,
+  &-3 {
+    display: none;
+  }
+
+  header.menuOpen &-1,
+  header.menuOpen &-2,
+  header.menuOpen &-3 {
+    display: block;
+  }
 }
 
 .socials.menu-socials {
@@ -352,6 +368,19 @@ body {
       padding-top: 0;
       text-align: center;
     }
+
+    h2 {
+      @media (max-width: 420px) {
+        margin-top: 6px;
+        margin-right: 8px;
+      }
+
+      span {
+        @media (max-width: 420px) {
+          margin-left: 13px;
+        }
+      }
+    }
   }
 
   &-container {
@@ -365,6 +394,10 @@ body {
       display: flex;
       flex-direction: column;
       height: 861px;
+    }
+
+    @media (max-width: 420px) {
+      height: 544px;
     }
   }
 
@@ -382,6 +415,11 @@ body {
     @media (max-width: 768px) {
       font-size: 20px;
       padding: 24px 0 47px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 16px;
+      padding: 24px 0 50px;
     }
   }
 
@@ -432,6 +470,11 @@ body {
   @media (max-width: 768px) {
     font-size: 40px;
     line-height: 60px;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+    line-height: 40px;
   }
 
   &-gold {

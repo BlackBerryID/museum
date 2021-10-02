@@ -13,6 +13,11 @@
     height: 645px;
   }
 
+  @media (max-width: 420px) {
+    width: 380px;
+    height: 365px;
+  }
+
   &-wrapper {
     height: 750px !important;
 
@@ -22,6 +27,10 @@
 
     @media (max-width: 768px) {
       height: 546px !important;
+    }
+
+    @media (max-width: 420px) {
+      height: 285px !important;
     }
   }
 
@@ -122,6 +131,11 @@
       height: 100px;
       right: 12%;
     }
+
+    @media (max-width: 420px) {
+      height: 40px;
+      width: 230px;
+    }
   }
 
   &-fraction {
@@ -138,8 +152,18 @@
       left: 224px;
     }
 
+    @media (max-width: 420px) {
+      font-size: 16px;
+      left: -30px;
+      top: -21px;
+    }
+
     &-separator {
       margin: 0 10px;
+
+      @media (max-width: 420px) {
+        margin: 0 5px;
+      }
     }
   }
 
@@ -148,6 +172,12 @@
     right: 24px;
     top: 46%;
     width: 131px;
+
+    @media (max-width: 420px) {
+      right: 24px;
+      top: -11%;
+      width: 60px;
+    }
   }
 
   &-button {
@@ -158,10 +188,18 @@
       width: 30px !important;
       height: 8px !important;
       margin-top: 0 !important;
+
+      @media (max-width: 420px) {
+        width: 20px !important;
+      }
     }
 
     &-next {
       left: 50px !important;
+
+      @media (max-width: 420px) {
+        left: 35px !important;
+      }
     }
 
     &-next::after,
@@ -174,10 +212,12 @@
 
     &-next::after {
       background: url(../assets/img/welcome-slider/btnNext.svg) no-repeat;
+      background-position: right;
     }
 
     &-prev::after {
       background: url(../assets/img/welcome-slider/btnPrev.svg) no-repeat;
+      background-position: left;
     }
 
     &-next:hover,
@@ -197,6 +237,11 @@
       left: 327px !important;
     }
 
+    @media (max-width: 420px) {
+      top: -12px;
+      left: 40px !important;
+    }
+
     &-bullet {
       width: 16px !important;
       height: 16px !important;
@@ -208,6 +253,12 @@
       @media (max-width: 1024px) {
         width: 12px !important;
         height: 12px !important;
+      }
+
+      @media (max-width: 420px) {
+        width: 7px !important;
+        height: 7px !important;
+        margin: 0 5px !important;
       }
 
       &-active {
