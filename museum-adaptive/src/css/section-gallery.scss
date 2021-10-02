@@ -39,6 +39,10 @@
   @media (max-width: 768px) {
     height: 1180px;
   }
+
+  @media (max-width: 420px) {
+    height: 717px;
+  }
 }
 
 .picture-inner-container {
@@ -71,6 +75,11 @@
     @media (max-width: 768px) {
       width: 352px;
     }
+
+    @media (max-width: 420px) {
+      width: 178px;
+      margin-bottom: 20px;
+    }
   }
 
   .column {
@@ -83,6 +92,10 @@
 
     @media (max-width: 768px) {
       width: 352px;
+    }
+
+    @media (max-width: 420px) {
+      width: 178px;
     }
   }
 
