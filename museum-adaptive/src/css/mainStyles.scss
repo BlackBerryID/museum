@@ -55,6 +55,10 @@ body {
     @media (max-width: 768px) {
       height: 110px;
     }
+
+    @media (max-width: 420px) {
+      height: 90px;
+    }
   }
 
   &.menuOpen {
@@ -149,6 +153,14 @@ body {
 
   @media (max-width: 768px) {
     margin-top: 8px;
+  }
+
+  @media (max-width: 420px) {
+    background-size: 29px 26px;
+    font-size: 16px;
+    padding-left: 49px;
+    padding-top: 4px;
+    margin-top: -3px;
   }
 
   &:hover {
