@@ -1,7 +1,6 @@
-.swiper {
+.welcom-swiper {
   max-width: 1000px;
   height: 810px;
-  margin-right: 0 !important;
   margin-left: 400px !important;
 
   @media (max-width: 1024px) {
@@ -15,12 +14,9 @@
     height: 645px;
     margin-left: 0 !important;
   }
+}
 
-  @media (max-width: 420px) {
-    max-width: 380px;
-    height: 365px;
-  }
-
+.swiper {
   &-wrapper {
     height: 750px !important;
 

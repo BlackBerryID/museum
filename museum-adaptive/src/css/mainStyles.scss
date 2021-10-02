@@ -27,6 +27,7 @@ body {
   max-width: 1440px;
   width: calc(100% - 40px);
   margin: 0 auto;
+  overflow: hidden;
 
   @media (max-width: 1024px) {
     max-width: 984px;
@@ -638,12 +639,12 @@ body {
       @media (max-width: 1024px) {
         font-size: 28px;
         margin-top: 22px;
+        letter-spacing: 3px;
       }
 
       @media (max-width: 768px) {
         font-size: 22px;
         line-height: 24px;
-        letter-spacing: 3px;
         margin-top: 20px;
       }
 
@@ -653,16 +654,6 @@ body {
         margin-top: 19px;
       }
     }
-
-    // &.letter-spacing-3 h3 {
-    //   @media (max-width: 1024px) {
-    //     letter-spacing: 3px;
-    //   }
-
-    //   @media (max-width: 768px) {
-    //     letter-spacing: 5px;
-    //   }
-    // }
 
     h3:after {
       content: "";
@@ -728,7 +719,7 @@ body {
   color: #fff;
 
   @media (max-width: 1024px) {
-    padding-bottom: 62px;
+    padding-bottom: 60px;
   }
 
   @media (max-width: 768px) {
@@ -754,10 +745,11 @@ body {
     .img-comp-container {
       @media (max-width: 1024px) {
         width: 720px;
-        margin: 62px auto 0;
+        margin: 58px auto 0;
       }
 
       @media (max-width: 768px) {
+        // max-width: 728px;
         width: 728px;
         margin: 63px auto 0;
       }
@@ -785,7 +777,7 @@ body {
       @media (max-width: 1024px) {
         font-size: 20px;
         margin: 0;
-        line-height: 35px;
+        letter-spacing: -0.43px;
       }
 
       @media (max-width: 768px) {
@@ -837,12 +829,14 @@ body {
   &-img {
     position: absolute;
     width: 100%;
+    // width: calc(100vw - 40px);
     height: 100%;
     overflow: hidden;
 
     img {
       @media (max-width: 768px) {
         width: 728px;
+        // width: calc(100vw - 40px);
       }
 
       @media (max-width: 420px) {
@@ -877,7 +871,7 @@ body {
     background-color: #fff;
 
     @media (max-width: 420px) {
-      width: 3px;
+      width: 2px;
     }
   }
 
@@ -888,6 +882,12 @@ body {
       height: 348px;
       top: -350px;
     }
+
+    @media (max-width: 420px) {
+      height: 182px;
+      top: -184px;
+      left: 6px;
+    }
   }
 
   &-slider::after {
@@ -896,6 +896,12 @@ body {
     height: 332px;
     @media (max-width: 768px) {
       height: 322px;
+    }
+
+    @media (max-width: 420px) {
+      height: 168px;
+      left: 6px;
+      top: 16px;
     }
   }
 }
