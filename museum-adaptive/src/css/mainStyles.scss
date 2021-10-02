@@ -529,7 +529,7 @@ body {
     line-height: 60px;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 420px) {
     font-size: 28px;
     line-height: 40px;
   }
@@ -573,7 +573,11 @@ body {
   }
 
   @media (max-width: 768px) {
-    padding: 40px 0 42px;
+    padding: 40px 0 80px;
+  }
+
+  @media (max-width: 420px) {
+    padding: 41px 0 42px;
   }
 }
 
@@ -650,15 +654,15 @@ body {
       }
     }
 
-    &.letter-spacing-3 h3 {
-      @media (max-width: 1024px) {
-        letter-spacing: 3px;
-      }
+    // &.letter-spacing-3 h3 {
+    //   @media (max-width: 1024px) {
+    //     letter-spacing: 3px;
+    //   }
 
-      @media (max-width: 768px) {
-        letter-spacing: 5px;
-      }
-    }
+    //   @media (max-width: 768px) {
+    //     letter-spacing: 5px;
+    //   }
+    // }
 
     h3:after {
       content: "";
@@ -724,16 +728,12 @@ body {
   color: #fff;
 
   @media (max-width: 1024px) {
-    padding-bottom: 60px;
+    padding-bottom: 62px;
   }
 
   @media (max-width: 768px) {
     padding-top: 40px;
     padding-bottom: 40px;
-  }
-
-  @media (max-width: 420px) {
-    padding-bottom: 42px;
   }
 
   &-container {
@@ -762,9 +762,9 @@ body {
         margin: 63px auto 0;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 420px) {
         width: 380px;
-        margin: 61px auto 0;
+        margin: 62px auto 0;
       }
     }
 
@@ -981,6 +981,8 @@ body {
     @media (max-width: 1024px) {
       height: 60px;
       justify-content: space-evenly;
+      margin-top: 0px;
+      padding-top: 1px;
     }
 
     @media (max-width: 768px) {
@@ -1127,13 +1129,20 @@ body {
         background: linear-gradient(
           to right,
           $red 0%,
-          $red 40%,
-          #c4c4c4 40%,
+          $red 54%,
+          #c4c4c4 54%,
           #c4c4c4 100%
         );
 
         @media (max-width: 1024px) {
           width: 564px;
+          background: linear-gradient(
+            to right,
+            $red 0%,
+            $red 40%,
+            #c4c4c4 40%,
+            #c4c4c4 100%
+          );
         }
 
         @media (max-width: 768px) {
@@ -1394,6 +1403,11 @@ body {
 
       @media (max-width: 1024px) {
         align-items: center;
+        margin-left: 30px;
+      }
+
+      @media (max-width: 768px) {
+        margin-left: 0;
       }
 
       @media (max-width: 420px) {
