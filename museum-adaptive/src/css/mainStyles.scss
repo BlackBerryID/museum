@@ -733,7 +733,7 @@ body {
   }
 
   @media (max-width: 420px) {
-    padding-bottom: 41px;
+    padding-bottom: 42px;
   }
 
   &-container {
@@ -911,6 +911,10 @@ body {
     padding: 40px 0 62px;
   }
 
+  @media (max-width: 420px) {
+    padding: 37px 0 62px;
+  }
+
   &-player {
     position: relative;
     height: 650px;
@@ -921,6 +925,10 @@ body {
 
     @media (max-width: 768px) {
       height: 329px;
+    }
+
+    @media (max-width: 420px) {
+      height: 172px;
     }
 
     img {
@@ -947,6 +955,11 @@ body {
       @media (max-width: 768px) {
         height: 80px;
         width: 80px;
+      }
+
+      @media (max-width: 420px) {
+        height: 50px;
+        width: 50px;
       }
 
       &:hover {
@@ -976,6 +989,12 @@ body {
       padding-top: 6px;
     }
 
+    @media (max-width: 420px) {
+      height: 50px;
+      padding-top: 1px;
+      margin-top: 3px;
+    }
+
     .btn {
       background-repeat: no-repeat;
       background-position: center;
@@ -1002,6 +1021,14 @@ body {
           margin-left: 0;
           margin-right: 3px;
         }
+
+        @media (max-width: 420px) {
+          width: 14px;
+          height: 18px;
+          background-size: cover;
+          margin-left: -9px;
+          margin-right: 2px;
+        }
       }
 
       &-volume {
@@ -1023,6 +1050,11 @@ body {
           height: 21px;
           margin-right: 0;
         }
+
+        @media (max-width: 420px) {
+          width: 18px;
+          height: 14px;
+        }
       }
 
       &-fullScreen {
@@ -1043,6 +1075,12 @@ body {
           width: 27px;
           height: 27px;
         }
+
+        @media (max-width: 420px) {
+          width: 18px;
+          height: 18px;
+          margin-right: -7px;
+        }
       }
     }
 
@@ -1061,6 +1099,10 @@ body {
         height: 5px;
       }
 
+      @media (max-width: 420px) {
+        height: 4px;
+      }
+
       &::-webkit-slider-thumb {
         width: 15px;
         height: 15px;
@@ -1072,6 +1114,11 @@ body {
         @media (max-width: 1024px) {
           width: 13px;
           height: 13px;
+        }
+
+        @media (max-width: 420px) {
+          width: 10px;
+          height: 10px;
         }
       }
 
@@ -1101,6 +1148,10 @@ body {
             #c4c4c4 100%
           );
         }
+
+        @media (max-width: 420px) {
+          margin-top: -3px;
+        }
       }
 
       &-volume {
@@ -1112,6 +1163,10 @@ body {
 
         @media (max-width: 768px) {
           width: 486px;
+        }
+
+        @media (max-width: 420px) {
+          width: 200px;
         }
       }
     }
@@ -1128,6 +1183,10 @@ body {
 
       @media (max-width: 768px) {
         width: 550px;
+      }
+
+      @media (max-width: 420px) {
+        width: 250px;
       }
     }
   }
@@ -1146,6 +1205,10 @@ body {
 
     h2 {
       width: 50%;
+
+      @media (max-width: 420px) {
+        width: 100%;
+      }
     }
 
     p {
