@@ -67,11 +67,11 @@ body {
 
   &.menuOpen {
     .logo {
-      @media (max-width: 1024px) {
+      @media (max-width: 1024px) and (min-width: 769px) {
         padding-left: 69px;
       }
 
-      @media (max-width: 768px) {
+      @media (max-width: 768px) and (min-width: 421px) {
         padding-left: 74px;
       }
     }
@@ -82,11 +82,13 @@ body {
 
     .menuBtn::before {
       top: 50%;
+      left: 4px;
       transform: rotate(-45deg) translateY(-50%);
     }
 
     .menuBtn::after {
       bottom: 50%;
+      left: 4px;
       transform: rotate(45deg) translateY(50%);
     }
 
@@ -191,12 +193,16 @@ body {
     }
 
     @media (max-width: 768px) {
-      position: absolute;
       top: 110px;
       left: -100%;
       width: 100%;
       max-width: 100%;
       height: 861px;
+    }
+
+    @media (max-width: 420px) {
+      top: 90px;
+      height: 544px;
     }
   }
 
@@ -289,6 +295,11 @@ body {
     max-width: 658px;
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
   }
+
+  @media (max-width: 420px) {
+    max-width: 310px;
+    padding-bottom: 20px;
+  }
 }
 
 .menu-image {
@@ -296,6 +307,10 @@ body {
     max-width: 658px;
     max-height: 194px;
     margin-bottom: 20px;
+
+    @media (max-width: 420px) {
+      margin: 0 13px 0 12px;
+    }
   }
 
   &-2,
@@ -306,18 +321,46 @@ body {
 
   &-3 {
     margin-left: 20px;
+
+    @media (max-width: 420px) {
+      margin: 0;
+    }
   }
 
   &-1,
   &-2,
   &-3 {
     display: none;
+
+    @media (max-width: 420px) {
+      max-width: 95px;
+      max-height: 95px;
+      width: 100%;
+    }
   }
 
   header.menuOpen &-1,
   header.menuOpen &-2,
   header.menuOpen &-3 {
     display: block;
+  }
+}
+
+.menu-picture-1 {
+  @media (max-width: 420px) {
+    order: 2;
+  }
+}
+
+.menu-picture-2 {
+  @media (max-width: 420px) {
+    order: 1;
+  }
+}
+
+.menu-picture-3 {
+  @media (max-width: 420px) {
+    order: 3;
   }
 }
 
@@ -328,8 +371,22 @@ body {
     margin: 34px auto 0;
   }
 
+  @media (max-width: 420px) {
+    margin: 23px auto 0;
+  }
+
   ul {
     width: 100%;
+
+    @media (max-width: 420px) {
+      justify-content: center;
+    }
+  }
+
+  li a {
+    @media (max-width: 420px) {
+      margin-left: 5px;
+    }
   }
 
   li:first-child a {

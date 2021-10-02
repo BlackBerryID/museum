@@ -35,21 +35,39 @@
             </li>
           </ul>
           <div class="menu-images">
-            <img
-              src="./assets/img/menu1.jpg"
-              alt="menu-image-1"
-              class="menu-image menu-image-1"
-            />
-            <img
-              src="./assets/img/menu2.jpg"
-              alt="menu-image-2"
-              class="menu-image menu-image-2"
-            />
-            <img
-              src="./assets/img/menu3.jpg"
-              alt="menu-image-3"
-              class="menu-image menu-image-3"
-            />
+            <picture class="menu-picture-1">
+              <source
+                srcset="./assets/img/menu1.jpg"
+                media="(min-width: 421px)"
+              />
+              <img
+                class="menu-image menu-image-1"
+                src="./assets/img/menu1-mini.jpg"
+                alt="menu-image-1"
+              />
+            </picture>
+            <picture class="menu-picture-2">
+              <source
+                srcset="./assets/img/menu2.jpg"
+                media="(min-width: 421px)"
+              />
+              <img
+                class="menu-image menu-image-2"
+                src="./assets/img/menu2-mini.jpg"
+                alt="menu-image-2"
+              />
+            </picture>
+            <picture class="menu-picture-3">
+              <source
+                srcset="./assets/img/menu3.jpg"
+                media="(min-width: 421px)"
+              />
+              <img
+                class="menu-image menu-image-3"
+                src="./assets/img/menu3-mini.jpg"
+                alt="menu-image-3"
+              />
+            </picture>
           </div>
           <div class="socials menu-socials">
             <ul>
