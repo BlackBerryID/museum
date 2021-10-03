@@ -3,18 +3,36 @@
   width: 100%;
   margin-top: 40px;
 
+  @media (min-width: 1025px) and (max-width: 1480px) {
+    margin-top: 44px;
+  }
+
   @media (max-width: 1024px) {
     min-height: 222px;
+    margin-top: 41px;
+  }
+
+  @media (min-width: 769px) and (max-width: 1023px) {
+    margin-top: 44px;
   }
 
   @media (max-width: 768px) {
     margin-top: 19px;
     min-height: 250px;
+    margin-top: 40px;
+  }
+
+  @media (min-width: 421px) and (max-width: 767px) {
+    margin-top: 44px;
   }
 
   @media (max-width: 420px) {
     margin-top: 40px;
     min-height: 160px;
+  }
+
+  @media (max-width: 419px) {
+    margin-top: 44px;
   }
 
   &-wrapper {

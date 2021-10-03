@@ -925,16 +925,24 @@ body {
     position: relative;
     height: 650px;
 
+    @media (max-width: 1919px) and (min-width: 1025px) {
+      max-height: 650px;
+      height: 100%;
+    }
+
     @media (max-width: 1024px) {
-      height: 444px;
+      max-height: 444px;
+      height: 100%;
     }
 
     @media (max-width: 768px) {
-      height: 329px;
+      max-height: 329px;
+      height: 100%;
     }
 
     @media (max-width: 420px) {
-      height: 172px;
+      max-height: 172px;
+      height: 100%;
     }
 
     img {
@@ -984,11 +992,19 @@ body {
     padding-top: 2px;
     background-color: #000;
 
+    @media (min-width: 1025px) and (max-width: 1480px) {
+      margin-top: -5px;
+    }
+
     @media (max-width: 1024px) {
       height: 60px;
       justify-content: space-evenly;
-      margin-top: 0px;
+      margin-top: -1px;
       padding-top: 1px;
+    }
+
+    @media (min-width: 769px) and (max-width: 1023px) {
+      margin-top: -5px;
     }
 
     @media (max-width: 768px) {
@@ -997,10 +1013,18 @@ body {
       padding-top: 6px;
     }
 
+    @media (min-width: 421px) and (max-width: 767px) {
+      margin-top: -5px;
+    }
+
     @media (max-width: 420px) {
       height: 50px;
       padding-top: 1px;
       margin-top: 3px;
+    }
+
+    @media (max-width: 419px) {
+      margin-top: -5px;
     }
 
     .btn {
