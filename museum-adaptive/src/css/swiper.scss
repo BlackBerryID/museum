@@ -12,7 +12,8 @@
   @media (max-width: 768px) {
     max-width: 728px;
     height: 645px;
-    margin-left: 0 !important;
+    margin-left: 1px !important;
+    margin-right: 1px !important;
   }
 }
 
@@ -140,7 +141,7 @@
       right: 12%;
     }
 
-    @media (max-width: 490px) {
+    @media (max-width: 600px) {
       right: -75px;
     }
 
@@ -149,6 +150,10 @@
       width: 230px;
       bottom: -1px;
       right: 12%;
+    }
+
+    @media (max-width: 360px) {
+      right: 0;
     }
   }
 
