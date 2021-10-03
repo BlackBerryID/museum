@@ -32,19 +32,16 @@ function initComparisons() {
         slider.style.left = w / 2 - slider.offsetWidth / 2 + 80 + "px";
         img.style.width =
           parseFloat(slider.style.left) + slider.offsetWidth / 2 + "px";
-        console.log(window.innerWidth);
       } else if (window.innerWidth > 420) {
         slider.style.top = h / 2 - slider.offsetHeight / 2 + 12 + "px";
         slider.style.left = w / 2 - slider.offsetWidth / 2 + 77 + "px";
         img.style.width =
           parseFloat(slider.style.left) + slider.offsetWidth / 2 + "px";
-        console.log(window.innerWidth);
       } else if (window.innerWidth <= 420) {
         slider.style.top = h / 2 - slider.offsetHeight / 2 + 7 + "px";
         slider.style.left = w / 2 - slider.offsetWidth / 2 + 40 + "px";
         img.style.width =
           parseFloat(slider.style.left) + slider.offsetWidth / 2 + "px";
-        console.log(window.innerWidth);
       }
     }
     // slider.style.top = h / 2 - slider.offsetHeight / 2 + "px";
