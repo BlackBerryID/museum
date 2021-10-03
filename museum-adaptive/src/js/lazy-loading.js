@@ -20,7 +20,7 @@ if (lazyIframeBlocks.length > 0) {
   lazyIframeBlocks.forEach((block) => {
     if (block.dataset.src) {
       lazyIframeBlocksPos.push(block.getBoundingClientRect().top + scrollY);
-      lazyScrollCheck();
+      loadIframes();
     }
   });
 }
