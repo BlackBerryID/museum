@@ -10,3 +10,4 @@ import "./js/fix";
 import "./js/console";
 import "./js/ripple-effect";
 import "./js/burger-menu";
+import "./js/lazy-loading";
