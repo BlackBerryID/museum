@@ -16,8 +16,10 @@ function setRangeInputPos() {
     console.log(window.innerWidth);
   } else if (window.innerWidth > 768) {
     inputProgress.setAttribute("value", "40");
-  } else {
+  } else if (window.innerWidth > 420) {
     inputProgress.setAttribute("value", "31");
+  } else {
+    inputProgress.setAttribute("value", "40");
   }
 }
 

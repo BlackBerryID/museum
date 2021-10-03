@@ -68,9 +68,9 @@ body {
 
   &.menuOpen {
     .logo {
-      @media (max-width: 1024px) and (min-width: 769px) {
-        padding-left: 69px;
-      }
+      // @media (max-width: 1024px) and (min-width: 769px) {
+      //   padding-left: 69px;
+      // }
 
       @media (max-width: 768px) and (min-width: 421px) {
         padding-left: 74px;
@@ -165,7 +165,7 @@ body {
   @media (max-width: 420px) {
     background-size: 29px 26px;
     font-size: 16px;
-    padding-left: 49px;
+    padding-left: 54px;
     padding-top: 4px;
     margin-top: -3px;
   }
@@ -777,7 +777,6 @@ body {
       @media (max-width: 1024px) {
         font-size: 20px;
         margin: 0;
-        letter-spacing: -0.43px;
       }
 
       @media (max-width: 768px) {
@@ -1222,6 +1221,13 @@ body {
 
         @media (max-width: 420px) {
           margin-top: -3px;
+          background: linear-gradient(
+            to right,
+            $red 0%,
+            $red 40%,
+            #c4c4c4 40%,
+            #c4c4c4 100%
+          );
         }
       }
 
@@ -1318,6 +1324,10 @@ body {
 
     @media (max-width: 768px) {
       margin-bottom: 20px;
+    }
+
+    @media (max-width: 420px) {
+      margin-bottom: 19px;
     }
 
     h2 {
@@ -1722,7 +1732,7 @@ body {
 }
 
 .contacts {
-  padding-bottom: 70px;
+  padding-bottom: 74px;
 
   @media (max-width: 1024px) {
     padding-top: 56px;
@@ -1731,10 +1741,11 @@ body {
 
   @media (max-width: 768px) {
     padding-top: 42px;
+    padding-bottom: 67px;
   }
 
   @media (max-width: 420px) {
-    padding-bottom: 37px;
+    padding-bottom: 41px;
   }
 
   h2 {
@@ -1873,6 +1884,12 @@ body {
 
   @media (max-width: 420px) {
     padding: 40px 0 50px;
+  }
+
+  .logo-footer {
+    @media (max-width: 420px) {
+      padding-left: 48px;
+    }
   }
 
   &-container {
