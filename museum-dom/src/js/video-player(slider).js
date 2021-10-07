@@ -10,6 +10,8 @@ let currentVideo = document.querySelector(".swiper-slide-active > video");
 const middlePlayButton = document.querySelector(".video-player > .btn");
 const playButton = document.querySelector(".control-panel > .btn-play");
 const progressBar = document.querySelector(".input-progress");
+const volumeBar = document.querySelector(".input-volume");
+const volumeButton = document.querySelector(".btn-volume");
 playButton.addEventListener("click", togglePlay);
 middlePlayButton.addEventListener("click", togglePlay);
 
@@ -64,6 +66,33 @@ function rewind(e) {
   }
 }
 
+function changeVolume(e) {
+  let changeValue = e.offsetX / volumeBar.offsetWidth;
+  changeValue = parseFloat(changeValue.toFixed(1));
+  currentVideo.volume = changeValue;
+  volumeBar.style.background = `linear-gradient(to right, #710707 0%, #710707 ${
+    changeValue * 100
+  }%, #c4c4c4 ${changeValue * 100}%, white 100%)`;
+  volumeBar.value = changeValue;
+  console.log(currentVideo.volume);
+  if (currentVideo.volume === 0) {
+    volumeButton.style.backgroundImage = `url(./assets/svg/btn-volume-muted.svg)`;
+  } else {
+    volumeButton.style.backgroundImage = `url(./assets/svg/btn-volume.svg)`;
+  }
+}
+
+function toggleVolume() {
+  if (currentVideo.muted) {
+    currentVideo.muted = false;
+    this.style.backgroundImage = `url(./assets/svg/btn-volume.svg)`;
+  } else {
+    currentVideo.muted = true;
+    this.style.backgroundImage = `url(./assets/svg/btn-volume-muted.svg)`;
+  }
+  console.log("bingo");
+}
+
 videoSwiper.on("realIndexChange", swipeMainVideo);
 
 currentVideo.addEventListener("play", updateButton);
@@ -71,10 +100,26 @@ currentVideo.addEventListener("pause", updateButton);
 currentVideo.addEventListener("click", togglePlay);
 currentVideo.addEventListener("timeupdate", handleProgress);
 
-let isMousedown = false;
-progressBar.addEventListener("mousemove", (e) => isMousedown && rewind(e));
+volumeButton.addEventListener("click", toggleVolume);
+
+let isVolumeMousedown = false;
+volumeBar.addEventListener(
+  "mousemove",
+  (e) => isVolumeMousedown && changeVolume(e)
+);
+volumeBar.addEventListener("mousedown", (e) => {
+  e.preventDefault();
+  isVolumeMousedown = true;
+});
+window.addEventListener("mouseup", () => (isVolumeMousedown = false));
+
+let isProgressMousedown = false;
+progressBar.addEventListener(
+  "mousemove",
+  (e) => isProgressMousedown && rewind(e)
+);
 progressBar.addEventListener("mousedown", (e) => {
   e.preventDefault();
-  isMousedown = true;
+  isProgressMousedown = true;
 });
-window.addEventListener("mouseup", () => (isMousedown = false));
+window.addEventListener("mouseup", () => (isProgressMousedown = false));
