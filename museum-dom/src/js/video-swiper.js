@@ -31,8 +31,6 @@ const videoSwiper = new Swiper(".video-swiper", {
     },
   },
 
-  // slidesPerView: 3,
-  // spaceBetween: 42,
   allowTouchMove: false,
 });
 

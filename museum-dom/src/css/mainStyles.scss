@@ -1183,8 +1183,8 @@ body {
         background: linear-gradient(
           to right,
           $red 0%,
-          $red 54%,
-          #c4c4c4 54%,
+          $red 0%,
+          #c4c4c4 0%,
           #c4c4c4 100%
         );
 
@@ -1197,13 +1197,13 @@ body {
         @media (max-width: 1024px) {
           width: 564px;
           margin: 0;
-          background: linear-gradient(
-            to right,
-            $red 0%,
-            $red 40%,
-            #c4c4c4 40%,
-            #c4c4c4 100%
-          );
+          // background: linear-gradient(
+          //   to right,
+          //   $red 0%,
+          //   $red 40%,
+          //   #c4c4c4 40%,
+          //   #c4c4c4 100%
+          // );
         }
 
         @media (min-width: 769px) and (max-width: 1023px) {
@@ -1217,24 +1217,24 @@ body {
           top: 0;
           width: 100%;
           margin: 0;
-          background: linear-gradient(
-            to right,
-            $red 0%,
-            $red 31%,
-            #c4c4c4 31%,
-            #c4c4c4 100%
-          );
+          // background: linear-gradient(
+          //   to right,
+          //   $red 0%,
+          //   $red 31%,
+          //   #c4c4c4 31%,
+          //   #c4c4c4 100%
+          // );
         }
 
         @media (max-width: 420px) {
           margin-top: -3px;
-          background: linear-gradient(
-            to right,
-            $red 0%,
-            $red 40%,
-            #c4c4c4 40%,
-            #c4c4c4 100%
-          );
+          // background: linear-gradient(
+          //   to right,
+          //   $red 0%,
+          //   $red 40%,
+          //   #c4c4c4 40%,
+          //   #c4c4c4 100%
+          // );
         }
       }
 
