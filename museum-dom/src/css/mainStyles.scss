@@ -914,6 +914,25 @@ body {
   display: none !important;
 }
 
+.speedInfo {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+  font-weight: 700;
+  color: #ebebeb;
+}
+
+.speedInfo.active {
+  display: flex;
+}
+
 .video {
   padding-bottom: 71px;
 

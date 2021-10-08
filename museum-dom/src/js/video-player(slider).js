@@ -13,7 +13,9 @@ const progressBar = document.querySelector(".input-progress");
 const volumeBar = document.querySelector(".input-volume");
 const volumeButton = document.querySelector(".btn-volume");
 const fullscreenButtom = document.querySelector(".btn-fullScreen");
-const controlPanel = document.querySelector(".control-panel");
+const videoWrapper = document.querySelector(".video-wrapper");
+const videoSpeedInfo = document.querySelector(".speedInfo");
+let speedMessageTimer;
 playButton.addEventListener("click", togglePlay);
 middlePlayButton.addEventListener("click", togglePlay);
 
@@ -92,7 +94,6 @@ function toggleVolume() {
     currentVideo.muted = true;
     this.style.backgroundImage = `url(./assets/svg/btn-volume-muted.svg)`;
   }
-  console.log("bingo");
 }
 
 function toggleFullScreen() {
@@ -103,19 +104,49 @@ function toggleFullScreen() {
   }
 }
 
-const videoWrapper = document.querySelector(".video-wrapper");
+function keyControl(e) {
+  switch (e.code) {
+    case "Space":
+      e.preventDefault();
+      togglePlay();
+      break;
+    case "KeyM":
+      toggleVolume.call(volumeButton);
+      break;
+    case "KeyF":
+      toggleFullScreen();
+      break;
+    case "Comma":
+      if (e.shiftKey) {
+        if (currentVideo.playbackRate >= 0.5) {
+          currentVideo.playbackRate = currentVideo.playbackRate - 0.25;
+        }
+        callSpeedMessage();
+      }
+      break;
+    case "Period":
+      if (e.shiftKey) {
+        if (currentVideo.playbackRate <= 1.75) {
+          currentVideo.playbackRate = currentVideo.playbackRate + 0.25;
+        }
+        callSpeedMessage();
+      }
+      break;
+  }
+}
 
-// function toggleControlPanel() {
-//   if (!document.fullscreenElement) {
-//     controlPanel.classList.remove("active");
-//   } else {
-//     controlPanel.classList.add("active");
-//   }
-// }
-
-// document.addEventListener("fullscreenchange", toggleControlPanel);
+function callSpeedMessage() {
+  clearTimeout(speedMessageTimer);
+  videoSpeedInfo.textContent = `${currentVideo.playbackRate}x`;
+  videoSpeedInfo.classList.add("active");
+  speedMessageTimer = setTimeout(
+    () => videoSpeedInfo.classList.remove("active"),
+    500
+  );
+}
 
 videoSwiper.on("realIndexChange", swipeMainVideo);
+document.addEventListener("keydown", keyControl);
 
 currentVideo.addEventListener("play", updateButton);
 currentVideo.addEventListener("pause", updateButton);
