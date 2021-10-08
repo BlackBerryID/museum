@@ -12,6 +12,8 @@ const playButton = document.querySelector(".control-panel > .btn-play");
 const progressBar = document.querySelector(".input-progress");
 const volumeBar = document.querySelector(".input-volume");
 const volumeButton = document.querySelector(".btn-volume");
+const fullscreenButtom = document.querySelector(".btn-fullScreen");
+const controlPanel = document.querySelector(".control-panel");
 playButton.addEventListener("click", togglePlay);
 middlePlayButton.addEventListener("click", togglePlay);
 
@@ -93,6 +95,26 @@ function toggleVolume() {
   console.log("bingo");
 }
 
+function toggleFullScreen() {
+  if (!document.fullscreenElement) {
+    videoWrapper.requestFullscreen();
+  } else {
+    document.exitFullscreen();
+  }
+}
+
+const videoWrapper = document.querySelector(".video-wrapper");
+
+// function toggleControlPanel() {
+//   if (!document.fullscreenElement) {
+//     controlPanel.classList.remove("active");
+//   } else {
+//     controlPanel.classList.add("active");
+//   }
+// }
+
+// document.addEventListener("fullscreenchange", toggleControlPanel);
+
 videoSwiper.on("realIndexChange", swipeMainVideo);
 
 currentVideo.addEventListener("play", updateButton);
@@ -101,6 +123,7 @@ currentVideo.addEventListener("click", togglePlay);
 currentVideo.addEventListener("timeupdate", handleProgress);
 
 volumeButton.addEventListener("click", toggleVolume);
+fullscreenButtom.addEventListener("click", toggleFullScreen);
 
 let isVolumeMousedown = false;
 volumeBar.addEventListener(
