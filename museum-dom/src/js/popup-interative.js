@@ -107,6 +107,7 @@ popup.addEventListener("transitionstart", (e) => {
 const dateInput = document.querySelector(".input-date");
 const timeInput = document.querySelector(".input-time");
 const dateInfo = document.querySelector(".info-date");
+const timeInfo = document.querySelector(".info-time");
 const months = {
   0: "January",
   1: "February",
@@ -130,6 +131,7 @@ const days = {
   5: "Friday",
   6: "Saturday",
 };
+
 const today = new Date();
 dateInput.setAttribute(
   "min",
@@ -145,4 +147,8 @@ dateInput.addEventListener("change", () => {
   let day = date.getDay();
   // prettier-ignore
   dateInfo.textContent = `${days[day]}, ${months[month]} ${String(year)[2]}${String(year)[3]}`;
+});
+
+timeInput.addEventListener("input", () => {
+  timeInfo.textContent = timeInput.value;
 });

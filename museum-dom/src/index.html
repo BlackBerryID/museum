@@ -550,9 +550,18 @@
                 />
                 <input
                   class="input-time"
+                  list="time"
                   type="time"
                   onchange="this.classList.toggle('has-value', this.value)"
                 />
+                <datalist id="time">
+                  <option value="Chocolate"></option>
+                  <option value="Coconut"></option>
+                  <option value="Mint"></option>
+                  <option value="Strawberry"></option>
+                  <option value="Vanilla"></option>
+                </datalist>
+
                 <input class="input-name" placeholder="Name" type="text" />
                 <input placeholder="E-mail" type="email" />
                 <input placeholder="Phone" type="tel" />
@@ -627,7 +636,7 @@
               <div class="popup-info-date">
                 <h2>Overview</h2>
                 <h4>Tour to Louvre</h4>
-                <div class="info-date">-</div>
+                <div class="info-date">Friday, August 19</div>
                 <div class="info-time">16 : 30</div>
                 <div class="info-type">Temporary exhibition</div>
                 <img src="./assets/img/overview.jpg" alt="overview" />
