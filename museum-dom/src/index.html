@@ -382,17 +382,17 @@
             <div class="tickets-order">
               <div class="ticket-type">
                 <h4>Ticket Type</h4>
-                <label for="permanent">
+                <label for="permanent" class="permanent active">
                   <input type="radio" id="permanent" name="ticket" checked />
                   Permanent exhibition
                   <span class="checkmark"></span>
                 </label>
-                <label for="temporary">
+                <label for="temporary" class="temporary">
                   <input type="radio" id="temporary" name="ticket" />
                   Temporary exhibition
                   <span class="checkmark"></span>
                 </label>
-                <label for="combined">
+                <label for="combined" class="combined">
                   <input type="radio" id="combined" name="ticket" />
                   Combined Admission
                   <span class="checkmark"></span>
@@ -405,7 +405,14 @@
                   <button onclick="this.nextElementSibling.stepDown()">
                     −
                   </button>
-                  <input type="number" min="0" max="20" value="1" readonly />
+                  <input
+                    class="basic-tickets-amount"
+                    type="number"
+                    min="0"
+                    max="20"
+                    value="1"
+                    readonly
+                  />
                   <button onclick="this.previousElementSibling.stepUp()">
                     +
                   </button>
@@ -415,7 +422,14 @@
                   <button onclick="this.nextElementSibling.stepDown()">
                     −
                   </button>
-                  <input type="number" min="0" max="20" value="1" readonly />
+                  <input
+                    class="senior-tickets-amount"
+                    type="number"
+                    min="0"
+                    max="20"
+                    value="1"
+                    readonly
+                  />
                   <button onclick="this.previousElementSibling.stepUp()">
                     +
                   </button>

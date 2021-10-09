@@ -12,3 +12,4 @@ import "./js/ripple-effect";
 import "./js/burger-menu";
 import "./js/lazy-loading";
 import "./js/video-player(slider)";
+import "./js/section-tickets";

@@ -748,6 +748,10 @@ body {
         margin: 58px auto 0;
       }
 
+      @media (min-width: 1025px) {
+        margin-left: -25px;
+      }
+
       @media (max-width: 768px) {
         // max-width: 728px;
         width: 728px;
