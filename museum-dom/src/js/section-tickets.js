@@ -24,17 +24,6 @@ labelList.forEach((item) =>
         sessionStorage.setItem("ticketType", "combined");
       }
 
-      switch (sessionStorage.getItem("ticketType")) {
-        case "permanent":
-          ticketTypeCost = 20;
-          break;
-        case "temporary":
-          ticketTypeCost = 25;
-          break;
-        case "combined":
-          ticketTypeCost = 40;
-          break;
-      }
       priceRecount();
     }
   })
@@ -55,6 +44,18 @@ ticketsInputButtonList.forEach((item) =>
 );
 
 function priceRecount() {
+  switch (sessionStorage.getItem("ticketType")) {
+    case "permanent":
+      ticketTypeCost = 20;
+      break;
+    case "temporary":
+      ticketTypeCost = 25;
+      break;
+    case "combined":
+      ticketTypeCost = 40;
+      break;
+  }
+
   totalPrice.textContent =
     ticketTypeCost * basicTicketsInput.value +
     (ticketTypeCost / 2) * seniorTicketsInput.value;
@@ -83,4 +84,4 @@ function checkSessionStorage() {
 checkSessionStorage();
 priceRecount();
 
-export { checkSessionStorage, ticketTypeCost, priceRecount };
+export { checkSessionStorage, priceRecount };
