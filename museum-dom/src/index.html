@@ -557,18 +557,18 @@
                 <input placeholder="E-mail" type="email" />
                 <input placeholder="Phone" type="tel" />
                 <div class="select-wrapper">
-                  <select>
+                  <select id="popup-select">
                     <option value="" disabled selected hidden>
                       Ticket Type
                     </option>
-                    <option>Permanent exhibition</option>
-                    <option>Temporary exhibition</option>
-                    <option>Combined Admission</option>
+                    <option value="permanent">Permanent exhibition</option>
+                    <option value="temporary">Temporary exhibition</option>
+                    <option value="combined">Combined Admission</option>
                   </select>
                 </div>
                 <div class="popup-booking-entry">
                   <h4 class="title-underline title-gold">Entry Ticket</h4>
-                  <div class="amount">
+                  <div class="amount popup-amount">
                     <div class="tickets-wrapper">
                       <p>Basic 18+ (20 €)</p>
                       <div class="tickets-amount">
@@ -579,6 +579,7 @@
                           −
                         </button>
                         <input
+                          class="basic-tickets-amount-popup"
                           type="number"
                           min="0"
                           max="20"
@@ -603,6 +604,7 @@
                           −
                         </button>
                         <input
+                          class="senior-tickets-amount-popup"
                           type="number"
                           min="0"
                           max="20"
