@@ -101,3 +101,48 @@ popup.addEventListener("transitionstart", (e) => {
     popupPriceRecount();
   }
 });
+
+// inputs date and time
+
+const dateInput = document.querySelector(".input-date");
+const timeInput = document.querySelector(".input-time");
+const dateInfo = document.querySelector(".info-date");
+const months = {
+  0: "January",
+  1: "February",
+  2: "March",
+  3: "April",
+  4: "May",
+  5: "June",
+  6: "July",
+  7: "August",
+  8: "September",
+  9: "October",
+  10: "November",
+  11: "December",
+};
+const days = {
+  0: "Sunday",
+  1: "Monday",
+  2: "Tuesday",
+  3: "Wednesday",
+  4: "Thursday",
+  5: "Friday",
+  6: "Saturday",
+};
+const today = new Date();
+dateInput.setAttribute(
+  "min",
+  `${today.getFullYear()}-${today.getMonth() + 1}-${
+    today.getDate() <= 9 ? "0" + today.getDate() : today.getDate()
+  }`
+);
+
+dateInput.addEventListener("change", () => {
+  let date = new Date(Date.parse(dateInput.value));
+  let year = date.getFullYear();
+  let month = date.getMonth();
+  let day = date.getDay();
+  // prettier-ignore
+  dateInfo.textContent = `${days[day]}, ${months[month]} ${String(year)[2]}${String(year)[3]}`;
+});
