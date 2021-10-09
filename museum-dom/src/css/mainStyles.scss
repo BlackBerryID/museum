@@ -1547,14 +1547,14 @@ body {
         cursor: pointer;
         user-select: none;
 
+        &.active .checkmark:after {
+          display: block;
+        }
+
         input {
           position: absolute;
           margin-right: 22px;
           opacity: 0;
-
-          &:checked ~ .checkmark:after {
-            display: block;
-          }
         }
 
         .checkmark {
