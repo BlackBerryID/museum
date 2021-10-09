@@ -26,6 +26,11 @@ function swipeMainVideo() {
   currentVideo.removeEventListener("pause", updateButton);
   currentVideo.removeEventListener("click", togglePlay);
   currentVideo.removeEventListener("timeupdate", handleProgress);
+  currentVideo.load();
+  middlePlayButton.style.display = "block";
+  playButton.style.backgroundImage = `url(./assets/svg/btn-play.svg)`;
+  progressBar.value = 0;
+  progressBar.style.background = `linear-gradient(to right, #710707 0%, #710707 0%, #c4c4c4 0%, white 100%)`;
 
   currentVideo = document.querySelector(".swiper-slide-active > video");
 
