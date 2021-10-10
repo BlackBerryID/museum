@@ -54,7 +54,7 @@ function validateEmail() {
 
       if (usernameLength + 1 !== fullUsernameLength) {
         emailValidationInfo.textContent =
-          "Only letters, numbers, underline or hyphen are allowed";
+          "Only letters, numbers, underlines or hyphens are allowed";
       }
     }
 
@@ -87,3 +87,34 @@ function validateEmail() {
 }
 
 emailInput.addEventListener("input", validateEmail);
+
+// phone input
+const phoneInput = document.querySelector("input[type='tel']");
+const phoneValidationInput = document.querySelector(
+  ".input-phone-validation-info"
+);
+
+function validatePhone() {
+  let phoneInputValue = phoneInput.value;
+  phoneInputValue = phoneInputValue.replace(/-/g, "");
+  phoneInputValue = phoneInputValue.replace(/\s/g, "");
+  if (phoneInputValue.length > 0) {
+    for (let i = 0, count = 0; i < phoneInputValue.length; i++) {
+      if (!+phoneInputValue[i]) {
+        phoneValidationInput.textContent =
+          "Only digits, hyphens and spaces are allowed";
+        return;
+      } else {
+        phoneValidationInput.textContent = "";
+        if (++count > 10) {
+          phoneValidationInput.textContent =
+            "You can enter no more then 10 digits";
+        }
+      }
+    }
+  } else {
+    phoneValidationInput.textContent = "";
+  }
+}
+
+phoneInput.addEventListener("input", validatePhone);
