@@ -11,8 +11,10 @@ function validateName() {
   ) {
     nameValidationInfo.textContent =
       "The name must contain from 3 to 15 characters";
+    highlightBorder.apply(nameInput);
   } else {
     nameValidationInfo.textContent = "";
+    returnBorderColor.apply(nameInput);
   }
 
   if (nameInput.value.length > 0) {
@@ -22,10 +24,12 @@ function validateName() {
       if (correctCharactersLength !== nameInput.value.length) {
         nameValidationInfo.textContent =
           "The name must contain only letters or spaces";
+        highlightBorder.apply(nameInput);
       }
     } else {
       nameValidationInfo.textContent =
         "The name must contain only letters or spaces";
+      highlightBorder.apply(nameInput);
     }
   }
 }
@@ -48,13 +52,16 @@ function validateEmail() {
       if (usernameLength < 3 || usernameLength > 15) {
         emailValidationInfo.textContent =
           "The email name must contain from 3 to 15 characters";
+        highlightBorder.apply(emailInput);
       } else {
         emailValidationInfo.textContent = "";
+        returnBorderColor.apply(emailInput);
       }
 
       if (usernameLength + 1 !== fullUsernameLength) {
         emailValidationInfo.textContent =
           "Only letters, numbers, underlines or hyphens are allowed";
+        highlightBorder.apply(emailInput);
       }
     }
 
@@ -67,6 +74,7 @@ function validateEmail() {
       if (firstDomenLength < 4) {
         emailValidationInfo.textContent =
           "The first level domain must contain at least 4 letters";
+        highlightBorder.apply(emailInput);
       }
 
       if (emailInput.value.match(/\.[a-z]+$/i)) {
@@ -78,11 +86,13 @@ function validateEmail() {
           if (topDomenLength < 2) {
             emailValidationInfo.textContent =
               "The top level domain must contain at least 2 letters";
+            highlightBorder.apply(emailInput);
           }
       }
     }
   } else {
     emailValidationInfo.textContent = "";
+    returnBorderColor.apply(emailInput);
   }
 }
 
@@ -103,18 +113,31 @@ function validatePhone() {
       if (!+phoneInputValue[i]) {
         phoneValidationInput.textContent =
           "Only digits, hyphens and spaces are allowed";
+        highlightBorder.apply(phoneInput);
         return;
       } else {
         phoneValidationInput.textContent = "";
         if (++count > 10) {
           phoneValidationInput.textContent =
             "You can enter no more then 10 digits";
+          highlightBorder.apply(phoneInput);
         }
       }
     }
   } else {
     phoneValidationInput.textContent = "";
+    returnBorderColor.apply(phoneInput);
   }
 }
 
 phoneInput.addEventListener("input", validatePhone);
+
+// highlight border
+
+function highlightBorder() {
+  this.style.border = "1px solid red";
+}
+
+function returnBorderColor() {
+  this.style.border = "1px solid #030303";
+}
