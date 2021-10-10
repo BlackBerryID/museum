@@ -15,3 +15,4 @@ import "./js/video-player(slider)";
 import "./js/section-tickets";
 import "./js/popup-interative";
 import "./js/popup-validation";
+import "./js/mapbox";
