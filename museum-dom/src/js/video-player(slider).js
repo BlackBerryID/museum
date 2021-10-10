@@ -110,6 +110,14 @@ function toggleFullScreen() {
 }
 
 function keyControl(e) {
+  if (!document.fullscreenElement) {
+    if (
+      window.scrollY + window.innerHeight < videoWrapper.offsetTop ||
+      window.scrollY > videoWrapper.offsetTop + videoWrapper.offsetHeight
+    )
+      return;
+  }
+
   switch (e.code) {
     case "Space":
       e.preventDefault();

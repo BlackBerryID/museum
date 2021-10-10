@@ -291,7 +291,7 @@
         border: 1px solid $dark;
         padding-left: 43px;
         cursor: text;
-        margin: 20px 0;
+        margin: 20px 0 0;
         background: url(../assets/svg/input-name.svg);
         background-repeat: no-repeat;
         background-size: 13px 15px;
@@ -320,6 +320,11 @@
 
         &:focus {
           outline: none;
+        }
+
+        &-validation-info {
+          display: inline-block;
+          font-weight: 400;
         }
       }
 
@@ -359,6 +364,11 @@
         &:focus {
           outline: none;
         }
+
+        & + .input-email-validation-info {
+          display: inline-block;
+          font-weight: 400;
+        }
       }
 
       input[type="tel"] {
@@ -368,7 +378,6 @@
         border: 1px solid $dark;
         padding-left: 43px;
         cursor: text;
-        margin: 20px 0;
         background: url(../assets/svg/input-tel.svg);
         background-repeat: no-repeat;
         background-size: 14px 23px;
@@ -397,6 +406,11 @@
 
         &:focus {
           outline: none;
+        }
+
+        & + .input-phone-validation-info {
+          display: inline-block;
+          font-weight: 400;
         }
       }
 

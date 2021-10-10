@@ -14,3 +14,4 @@ import "./js/lazy-loading";
 import "./js/video-player(slider)";
 import "./js/section-tickets";
 import "./js/popup-interative";
+import "./js/popup-validation";
