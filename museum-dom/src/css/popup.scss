@@ -207,76 +207,58 @@
         }
       }
 
-      input[type="time"] {
-        position: relative;
+      .input-time {
         width: 190px;
         height: 45px;
         border: 1px solid $dark;
         padding-left: 44px;
         cursor: text;
+        background: url(../assets/svg/input-time.svg);
+        background-repeat: no-repeat;
+        background-position: 9% 45%;
+        color: $dark;
+        font-family: $roboto;
+        font-size: 18px;
+        font-weight: 400;
         margin-left: 16px;
+        margin-top: 1px;
 
         @media (max-width: 768px) {
           width: 250px;
           margin-left: 25px;
+          background-position: 6% 45%;
         }
 
         @media (max-width: 420px) {
           width: 360px;
           margin-left: 0;
+          background-position: 4% 45%;
         }
 
-        &:not(:focus):not(.has-value)::before {
+        &::placeholder {
           font-family: $roboto;
-          font-weight: 400;
-          color: $dark;
           font-size: 18px;
-          line-height: 21px;
-          content: attr(placeholder);
-        }
-
-        &::before {
-          content: "";
-          position: absolute;
-        }
-
-        &::-webkit-datetime-edit-fields-wrapper {
-          color: $dark;
-          font-family: $roboto;
           font-weight: 400;
           color: $dark;
-          font-size: 16px;
-          line-height: 21px;
-        }
-
-        &:not(:focus):not(.has-value)::-webkit-datetime-edit-fields-wrapper {
-          color: transparent;
         }
 
         &::-webkit-calendar-picker-indicator {
           background: url(../assets/svg/input-arrow.svg);
           background-repeat: no-repeat;
-          background-position: 4px 1px;
+          background-position: 8px 4px;
           width: 20%;
+          margin-right: -3px;
           cursor: pointer;
+          opacity: 1;
+          color: transparent;
 
           @media (max-width: 768px) {
-            background-position: 16px 3px;
+            margin-right: -16px;
           }
 
           @media (max-width: 420px) {
-            background-position: 38px 1px;
+            margin-right: -36px;
           }
-        }
-
-        &::after {
-          content: "";
-          position: absolute;
-          left: 14px;
-          background: url(../assets/svg/input-time.svg);
-          background-repeat: no-repeat;
-          width: 15px;
-          height: 15px;
         }
 
         &:focus {
