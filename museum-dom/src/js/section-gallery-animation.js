@@ -17,7 +17,7 @@ function debounce(func, wait = 20, immediate = true) {
 const images = document.querySelectorAll(".gallery-img");
 
 function showImages(e) {
-  console.count(e);
+  // console.count(e);
   images.forEach((image) => {
     // half way through the image
     const slideInAt = window.scrollY + window.innerHeight;
