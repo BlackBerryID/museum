@@ -17,3 +17,4 @@ import "./js/popup-interative";
 import "./js/popup-validation";
 import "./js/mapbox";
 import "./js/to-top-button";
+import "./js/section-gallery-animation";

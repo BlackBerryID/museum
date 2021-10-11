@@ -1,0 +1,10 @@
+.gallery-img {
+  opacity: 0;
+  transform: translateY(15%) scale(0.9);
+  transition: transform 0.5s;
+}
+
+.gallery-img.active {
+  opacity: 1;
+  transform: translateY(0%) scale(1);
+}
